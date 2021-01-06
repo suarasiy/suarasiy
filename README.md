@@ -47,7 +47,7 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=react)
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=react)
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=react&layout=compact)
 
 
 <!--
