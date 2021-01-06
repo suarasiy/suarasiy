@@ -38,9 +38,10 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ## ⚡ Hobbies
 
-- Studying programming
+- Learning to code
 - Watching anime
 - Listening music
+- Playing card games / turn based
 
 ## 📊 My GitHub stats
 
