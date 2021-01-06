@@ -2,7 +2,7 @@
 
 ## Hi there 👋
 
-I am Suara (20), from Indonesia. Currently third years in college. Beginner in programming and GitHub. Please be kind to me and feel free to message me if you want.
+I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub. Please be kind to me.
 
 ## 🌱 Programming Passion
 
@@ -38,16 +38,16 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ## ⚡ Hobbies
 
-- Learning to code
+- Learning to write clean code
 - Watching anime
 - Listening music
 - Playing card games / turn based
 
 ## 📊 My GitHub stats
 
-![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=react)
+![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=vue)
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=react&layout=compact)
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=vue&layout=compact)
 
 
 <!--
