@@ -1,28 +1,34 @@
+![Suara's Banner](suara-cover-2.png)
+
 ### Hi there 👋
 
 I am Suara (20), from Indonesia. Currently third years in college. Beginner in programming and GitHub. Please be kind to me and feel free to message me if you want.
 
-### 🌱 Passion
+### 🌱 Programming Passion
 
 I'm currently learning / have interested in:
 
-| python       | status |
-| ------------- |:------:|
-| Flask         |✅     |
-| Flask-RESTful |✅     |
-| django        |🔄     |
+| python        | status   |
+| ------------- | :------: |
+| Flask         |✅       |
+| Flask-RESTful |✅       |
+| django        |🔄       |
 
-| other         | status |
-| ------------- |:------:|
-| ReactJS       |🔄     |
-| TypeScript    |🔄     |
-| JavaScript    |🔄     |
-| NodeJS        |🔄     |
+| other         | status   |
+| ------------- | :------: |
+| ReactJS       |🔄       |
+| TypeScript    |🔄       |
+| JavaScript    |🔄       |
+| NodeJS        |🔄       |
+
+### 🌱 Design Passion Tools
 
 I make design in:
 
-- Adobe Xd
-- Adobe Illustrator
+| software          | status   |
+| ----------------- | :------: |
+| Adobe Xd          | ✅      |
+| Adobe Illustrator | ✅      |
 
 ### 📫 Get in touch with me
 
@@ -32,6 +38,7 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ### ⚡ Hobbies
 
+- Studying programming
 - Watching anime
 - Listening music
 
