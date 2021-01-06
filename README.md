@@ -6,16 +6,18 @@ I am Suara (20), from Indonesia. Currently third years in college. Beginner in p
 
 I'm currently learning / have interested in:
 
-- Python
-  - Flask
-  - Flask Rest API
-  - django
-- ReactJS
-- TypeScript
-- JavaScript
-- NodeJS
-- Sass
-- MongoDB
+| python       | status |
+| ------------- |:------:|
+| Flask         |✅     |
+| Flask-RESTful |✅     |
+| django        |🔄     |
+
+| other         | status |
+| ------------- |:------:|
+| ReactJS       |🔄     |
+| TypeScript    |🔄     |
+| JavaScript    |🔄     |
+| NodeJS        |🔄     |
 
 I make design in:
 
