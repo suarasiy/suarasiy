@@ -10,10 +10,10 @@ I'm currently learning / have interested in:
 
 | python        | status   |   | other      | status |
 | ------------- | :------: | - | ---------- | :----: |
-| Flask         |✅       |   | ReactJS     | 🔄    |
-| Flask-RESTful |✅       |   | TypeScript  | 🔄    |
-| django        |🔄       |   | JavaScript  | 🔄    |
-|               |          |   | NodeJS     | 🔄     |
+| Playground    |✅       |   | ReactJS     | 🔄    |
+| Flask         |🔄       |   | TypeScript  | 🔄    |
+| Flask-RESTful |🔄       |   | JavaScript  | 🔄    |
+| django        |🔄       |   | NodeJS      | 🔄    |
 
 ## 🌱 Design Passion Tools
 
