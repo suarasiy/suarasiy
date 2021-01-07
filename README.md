@@ -4,7 +4,7 @@
 
 This is my first application, YouTube downloader. Build from `python` with `eel`. So many spaghetti code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases/tag/v0.4).
 
-[![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube&theme=vue)](https://github.com/suarasiy/pyeeltube)
+[![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube&theme=algolia)](https://github.com/suarasiy/pyeeltube)
 
 ## Hi there 👋
 
@@ -48,11 +48,11 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ## 📊 My GitHub stats
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=vue&layout=compact)
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=algolia&layout=compact)
 
-![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=vue)
+![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=algolia)
 
-![Suara's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=vue)
+![Suara's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=algolia)
 
 <!-- ## Time -->
 <!-- [![Suara's wakatime tracker](https://wakatime.com/badge/github/suarasiy/suarasiy.svg)](https://wakatime.com/badge/github/suarasiy/suarasiy) -->
