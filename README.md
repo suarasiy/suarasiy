@@ -1,5 +1,11 @@
 ![Suara's Banner](images/suara-cover-2.png)
 
+## 📌 App
+
+This is my first application, YouTube downloader. Build from `python` with `eel`. So many spaghetti code.
+
+[![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
+
 ## Hi there 👋
 
 I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub. Please be kind to me.
