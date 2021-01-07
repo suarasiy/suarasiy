@@ -6,6 +6,8 @@ This is my first application, YouTube downloader. Build from `python` with libra
 
 [![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
 
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
+
 ## Hi there 👋
 
 I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub. Please be kind to me.
@@ -47,8 +49,6 @@ I want to connect with peoples and sharing the experiences about programming and
 - Playing card games / turn based
 
 ## 📊 My GitHub stats
-
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
 
 ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true)
 
