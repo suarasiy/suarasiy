@@ -6,8 +6,6 @@ This is my first application, YouTube downloader. Build from `python` with libra
 
 [![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
-
 ## Hi there 👋
 
 I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub. Please be kind to me.
@@ -22,6 +20,10 @@ I'm currently learning / have interested in:
 | Flask         |🔄       |   | TypeScript  | 🔄    |
 | Flask-RESTful |🔄       |   | JavaScript  | 🔄    |
 | django        |🔄       |   | NodeJS      | 🔄    |
+
+Currently my programming languages:
+
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
 
 ## 🌱 Design Passion Tools
 
