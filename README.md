@@ -2,7 +2,7 @@
 
 ## 📌 App
 
-This is my first application, YouTube downloader. Build from `python` with `eel`. So many spaghetti code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases/tag/v0.4).
+This is my first application, YouTube downloader. Build from `python` with library `eel`. Sorry for many spaghetti code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases/tag/v0.4).
 
 [![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
 
