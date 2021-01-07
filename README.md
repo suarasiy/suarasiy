@@ -48,6 +48,9 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ![Suara's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy)
 
+### Time
+
+[![Suara's wakatime tracker](https://wakatime.com/badge/github/suarasiy/suarasiy.svg)](https://wakatime.com/badge/github/suarasiy/suarasiy)
 
 <!--
 **suarasiy/suarasiy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
