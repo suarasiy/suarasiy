@@ -41,6 +41,8 @@ I want to connect with peoples and sharing the experiences about programming and
 
 ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=vue)  ![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&theme=vue&layout=compact)
 
+![Suara's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy)
+
 
 <!--
 **suarasiy/suarasiy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
