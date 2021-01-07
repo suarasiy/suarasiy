@@ -30,8 +30,8 @@ I want to connect with peoples and sharing the experiences about programming and
 
 | account   | link |
 | :-------: | ---- |
-| <img src="images/discord.ico" alt="discord" width="24"/> | Suara#6359 |
-| <img src="images/twitter.ico" alt="twitter" width="24"/> | 🔄 |
+| <img src="images/discord.png" alt="discord" width="24"/> | Suara#6359 |
+| <img src="images/twitter.png" alt="twitter" width="24"/> | [@suarasiy](https://twitter.com/suarasiy) |
 
 ## ⚡ Hobbies
 
