@@ -1,4 +1,4 @@
-![Suara's Banner](suara-cover-2.png)
+![Suara's Banner](images/suara-cover-2.png)
 
 ## Hi there 👋
 
@@ -28,7 +28,10 @@ I make design in:
 
 I want to connect with peoples and sharing the experiences about programming and many more, so I leave my SNS below. Please, feel free to send a message if you want:
 
-- discord : Suara#6359
+| account   | link |
+| :-------: | ---- |
+| <img src="images/discord.ico" alt="discord" width="24"/> | Suara#6359 |
+| <img src="images/twitter.ico" alt="twitter" width="24"/> | 🔄 |
 
 ## ⚡ Hobbies
 
