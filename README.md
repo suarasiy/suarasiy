@@ -2,13 +2,13 @@
 
 ## 📌 App
 
-This is my first application, YouTube downloader. Build from `python` with library `eel`. Sorry for many spaghetti code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases).
+This is my first application, YouTube downloader. Build from `python` with library `eel`. Sorry for many bad code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases).
 
 [![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
 
 ## Hi there 👋
 
-I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub. Please be kind to me.
+I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in programming and GitHub.
 
 ## 🌱 Programming Passion
 
@@ -42,13 +42,6 @@ I want to connect with peoples and sharing the experiences about programming and
 | :-------: | ---- |
 | <img src="images/discord.png" alt="discord" width="24"/> | Suara#6359 |
 | <img src="images/twitter.png" alt="twitter" width="24"/> | [@suarasiy](https://twitter.com/suarasiy) |
-
-## ⚡ Hobbies
-
-- Learning to write clean code
-- Watching anime
-- Listening music
-- Playing card games / turn based
 
 ## 📊 My GitHub stats
 
