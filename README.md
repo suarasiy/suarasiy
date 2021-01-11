@@ -2,7 +2,11 @@
 
 ## 📌 App
 
-This is my first application, YouTube downloader. Build from `python` with library `eel`. Sorry for many bad code. You can download the program by download the [latest version](https://github.com/suarasiy/pyeeltube/releases).
+Pinned repository.
+
+[![tenorscrap card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=tenorscrap)](https://github.com/suarasiy/tenorscrap)
+
+[![melonkit card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=melonkit)](https://github.com/suarasiy/melonkit)
 
 [![Pyeeltube Card](https://github-readme-stats.vercel.app/api/pin?username=suarasiy&repo=pyeeltube)](https://github.com/suarasiy/pyeeltube)
 
