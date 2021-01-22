@@ -8,12 +8,12 @@ I am Suara (20), from Indonesia. Currently 3rd semester in college. Beginner in 
 
 I'm currently learning / have interested in:
 
-| python        | status   |   | other      | status |
-| ------------- | :------: | - | ---------- | :----: |
-| Playground    |✅       |   | ReactJS     | 🔄    |
-| Flask         |🔄       |   | TypeScript  | 🔄    |
-| Flask-RESTful |🔄       |   | JavaScript  | 🔄    |
-| django        |🔄       |   | NodeJS      | 🔄    |
+| lang / fr     |  logo   |     | lang / fr     |  logo   |
+| ------------- | :-----: | --- | ------------- | :-----: |
+| python        | <img src="images/ic_python.png" alt="python" width="24"/> | | TypeScript    | <img src="images/ic_typescript.png" alt="typescript" width="24"/>
+| Flask         | <img src="images/ic_flask.png" alt="flask" width="24"/>   | | NodeJS        | <img src="images/ic_nodejs.png" alt="node" width="24"/>
+| django        | <img src="images/ic_django.png" alt="django" width="24"/> | | JavaScript    | <img src="images/ic_javascript.png" alt="javascript" width="24"/>
+| ReactJS       | <img src="images/ic_react.png" alt="react" width="24"/>   | | Scss          | <img src="images/ic_sass.png" alt="sass" width="24"/>
 
 Currently my programming languages:
 
@@ -23,10 +23,10 @@ Currently my programming languages:
 
 I make design in:
 
-| software          | status   |
+| tools             | logo   |
 | ----------------- | :------: |
-| Adobe Xd          | ✅      |
-| Adobe Illustrator | ✅      |
+| Adobe Xd          | <img src="images/ic_xd.png" alt="adobe xd" width="24"/>          |
+| Adobe Illustrator | <img src="images/ic_ai.png" alt="adobe illustrator" width="24"/> |
 
 ## 📫 Get in touch with me
 
