@@ -8,14 +8,7 @@ I am Suara (20), from Indonesia. College (4th). Beginner in programming and GitH
 
 I'm currently learning / have interested in:
 
-<img src="images/ic_python.png" alt="python" width="24"/>
-<img src="images/ic_typescript.png" alt="typescript" width="24"/>
-<img src="images/ic_flask.png" alt="flask" width="18"/>
-<img src="images/ic_nodejs.png" alt="node" width="24"/>
-<img src="images/ic_django.png" alt="django" width="24"/>
-<img src="images/ic_javascript.png" alt="javascript" width="24"/>
-<img src="images/ic_react.png" alt="react" width="24"/>
-<img src="images/ic_sass.png" alt="sass" width="24"/>
+<img src="images/ic_python.png" alt="python" width="24"/> <img src="images/ic_typescript.png" alt="typescript" width="24"/><img src="images/ic_flask.png" alt="flask" width="18"/> <img src="images/ic_nodejs.png" alt="node" width="24"/> <img src="images/ic_django.png" alt="django" width="24"/> <img src="images/ic_javascript.png" alt="javascript" width="24"/> <img src="images/ic_react.png" alt="react" width="24"/> <img src="images/ic_sass.png" alt="sass" width="24"/>
 
 Currently my programming languages:
 
