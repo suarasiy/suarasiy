@@ -8,7 +8,7 @@ I am Suara (20), from Indonesia. College (4th). Beginner in programming and GitH
 
 I'm currently learning / have interested in:
 
-<img src="images/ic_python.png" alt="python" width="50"/> <img src="images/ic_typescript.png" alt="typescript" width="50"/> <img src="images/ic_flask.png" alt="flask" width="38"/> <img src="images/ic_nodejs.png" alt="node" width="50"/> <img src="images/ic_django.png" alt="django" width="50"/> <img src="images/ic_javascript.png" alt="javascript" width="50"/> <img src="images/ic_react.png" alt="react" width="50"/> <img src="images/ic_sass.png" alt="sass" width="50"/>
+<img src="images/ic_python.png" alt="python" width="40"/> <img src="images/ic_typescript.png" alt="typescript" width="40"/> <img src="images/ic_flask.png" alt="flask" width="35"/> <img src="images/ic_nodejs.png" alt="node" width="50"/> <img src="images/ic_django.png" alt="django" width="35"/> <img src="images/ic_javascript.png" alt="javascript" width="40"/> <img src="images/ic_react.png" alt="react" width="40"/> <img src="images/ic_sass.png" alt="sass" width="40"/>
 
 Currently my programming languages:
 
@@ -18,8 +18,7 @@ Currently my programming languages:
 
 I make design in:
 
-<img src="images/ic_xd.png" alt="adobe xd" width="24"/>
-<img src="images/ic_ai.png" alt="adobe illustrator" width="24"/>
+<img src="images/ic_xd.png" alt="adobe xd" width="40"/> <img src="images/ic_ai.png" alt="adobe illustrator" width="40"/>
 
 ## 📫 Get in touch with me
 
@@ -27,7 +26,7 @@ I want to connect with peoples and sharing the experiences about programming and
 
 | account   | id |
 | :-------: | ---- |
-| <img src="images/discord.png" alt="discord" width="24"/> | Suara#6359 |
+| [<img src="images/discord.png" alt="discord" width="24"/>](https://discord.com/) | Suara#6359 |
 
 ## 📊 My GitHub stats
 
