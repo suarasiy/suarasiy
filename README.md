@@ -18,7 +18,7 @@ Suara (20), Indonesia. College (4th). Beginner in programming and GitHub. Growin
 
 Currently progress:
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact&theme=dracula&hide_border=true)
 
 ## 🌱 Tools
 
@@ -29,18 +29,20 @@ Currently progress:
 [![Postman API](http://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white)](https://github.com/suarasiy)
 [![Unity Engine](http://img.shields.io/badge/-Unity-000?style=flat&logo=unity&logoColor=white)](https://github.com/suarasiy)
 
-<!-- ## 📫 Get in touch with me
+## 🌱 Sns
 
-| account   | id |
-| :-------: | ---- |
-| [<img src="images/discord.png" alt="discord" width="24"/>](https://discord.com/) | Suara#6359 | -->
+<p style="color: #F95774; font-weight: 500">*Change dot (.) to (#)</p>
+
+[![Discord](http://img.shields.io/badge/-Suara.6359-7289DA?style=flat&logo=discord&logoColor=white)](https://discord.com/)
+
 
 ## 🌱 Stats
 
 ![Suara's trophy](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true)
 
-![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true)
+![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=dracula&hide_border=true)
 
+![Suara's github wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=dracula&hide_border=true&layout=compact)
 <!-- ## Time -->
 <!-- [![Suara's wakatime tracker](https://wakatime.com/badge/github/suarasiy/suarasiy.svg)](https://wakatime.com/badge/github/suarasiy/suarasiy) -->
 
