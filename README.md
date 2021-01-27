@@ -2,37 +2,44 @@
 
 ## Hi there 👋
 
-I am Suara (20), from Indonesia. College (4th). Beginner in programming and GitHub.
+Suara (20), Indonesia. College (4th). Beginner in programming and GitHub. Growing process.
 
-## 🌱 Programming Passion
+## 🌱 Technologies
 
-I'm currently learning / have interested in:
+[![Python](http://img.shields.io/badge/-Python-3773A6?style=flat&logo=python&labelColor=white)](https://github.com/suarasiy)
+[![TypeScript](http://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&labelColor=white)](https://github.com/suarasiy)
+[![JavaScript](http://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&labelColor=black)](https://github.com/suarasiy)
+[![ReactJS](http://img.shields.io/badge/-ReactJS-0DBDF0?style=flat&logo=react&labelColor=black)](https://github.com/suarasiy)
+[![NodeJS](http://img.shields.io/badge/-NodeJS-58B84E?style=flat&logo=node.js&labelColor=black)](https://github.com/suarasiy)
+[![Sass](http://img.shields.io/badge/-Sass-CD669A?style=flat&logo=sass&labelColor=white)](https://github.com/suarasiy)
+[![Django](http://img.shields.io/badge/-Django-2BA977?style=flat&logo=django)](https://github.com/suarasiy)
+[![Flask](http://img.shields.io/badge/-Flask-FFF?style=flat&logo=flask&labelColor=black&textColor=black)](https://github.com/suarasiy)
+[![MongoDB](http://img.shields.io/badge/-MongoDB-49A24C?style=flat&logo=mongodb&labelColor=white)](https://github.com/suarasiy)
 
-<img src="images/ic_python.png" alt="python" width="40"/> <img src="images/ic_typescript.png" alt="typescript" width="40"/> <img src="images/ic_flask.png" alt="flask" width="35"/> <img src="images/ic_nodejs.png" alt="node" width="50"/> <img src="images/ic_django.png" alt="django" width="35"/> <img src="images/ic_javascript.png" alt="javascript" width="40"/> <img src="images/ic_react.png" alt="react" width="40"/> <img src="images/ic_sass.png" alt="sass" width="40"/>
-
-Currently my programming languages:
+Currently progress:
 
 ![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact)
 
-## 🌱 Design Passion Tools
+## 🌱 Tools
 
-I make design in:
+[![Visual Studio](http://img.shields.io/badge/-Visual_Studio-5C2D91?style=flat&logo=Visual-Studio)](https://github.com/suarasiy)
+[![Visual Studio Code](http://img.shields.io/badge/-Visual_Studio_Code-007ACC?style=flat&logo=Visual-Studio-Code)](https://github.com/suarasiy)
+[![Adobe Xd](http://img.shields.io/badge/-Adobe_Xd-FF61F6?style=flat&logo=adobe-xd&logoColor=black)](https://github.com/suarasiy)
+[![Adobe Illustrator](http://img.shields.io/badge/-Adobe_Illustrator-FF9A00?style=flat&logo=adobe-illustrator&logoColor=black)](https://github.com/suarasiy)
+[![Postman API](http://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white)](https://github.com/suarasiy)
+[![Unity Engine](http://img.shields.io/badge/-Unity-000?style=flat&logo=unity&logoColor=white)](https://github.com/suarasiy)
 
-<img src="images/ic_xd.png" alt="adobe xd" width="40"/> <img src="images/ic_ai.png" alt="adobe illustrator" width="40"/>
-
-## 📫 Get in touch with me
-
-I want to connect with peoples and sharing the experiences about programming and many more, so I leave my SNS below. Please, feel free to send a message if you want:
+<!-- ## 📫 Get in touch with me
 
 | account   | id |
 | :-------: | ---- |
-| [<img src="images/discord.png" alt="discord" width="24"/>](https://discord.com/) | Suara#6359 |
+| [<img src="images/discord.png" alt="discord" width="24"/>](https://discord.com/) | Suara#6359 | -->
 
-## 📊 My GitHub stats
+## 🌱 Stats
+
+![Suara's trophy](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true)
 
 ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true)
-
-![Suara's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy)
 
 <!-- ## Time -->
 <!-- [![Suara's wakatime tracker](https://wakatime.com/badge/github/suarasiy/suarasiy.svg)](https://wakatime.com/badge/github/suarasiy/suarasiy) -->
