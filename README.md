@@ -6,15 +6,15 @@ Suara (20), Indonesia. College (4th). Beginner in programming and GitHub. Growin
 
 ## 🌱 Technologies
 
-[![Python](http://img.shields.io/badge/-Python-3773A6?style=for-the-badge&logo=python&labelColor=white)](https://www.python.org/)
-[![TypeScript](http://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&labelColor=white)](https://www.typescriptlang.org/)
+[![Python](http://img.shields.io/badge/-Python-3773A6?style=for-the-badge&logo=python&labelColor=F8F8F8)](https://www.python.org/)
+[![TypeScript](http://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&labelColor=F8F8F8)](https://www.typescriptlang.org/)
 [![JavaScript](http://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=black)](https://www.javascript.com/)
 [![ReactJS](http://img.shields.io/badge/-ReactJS-0DBDF0?style=for-the-badge&logo=react&labelColor=black)](https://reactjs.org/)
 [![NodeJS](http://img.shields.io/badge/-NodeJS-58B84E?style=for-the-badge&logo=node.js&labelColor=black)](https://nodejs.org/en/)
-[![Sass](http://img.shields.io/badge/-Sass-CD669A?style=for-the-badge&logo=sass&labelColor=white)](https://sass-lang.com/)
+[![Sass](http://img.shields.io/badge/-Sass-CD669A?style=for-the-badge&logo=sass&labelColor=F8F8F8)](https://sass-lang.com/)
 [![Django](http://img.shields.io/badge/-Django-2BA977?style=for-the-badge&logo=django)](https://www.djangoproject.com/)
-[![Flask](http://img.shields.io/badge/-Flask-FFF?style=for-the-badge&logo=flask&labelColor=black)](https://flask.palletsprojects.com/en/1.1.x/)
-[![MongoDB](http://img.shields.io/badge/-MongoDB-49A24C?style=for-the-badge&logo=mongodb&labelColor=white)](https://www.mongodb.com/)
+[![Flask](http://img.shields.io/badge/-Flask-F8F8F8?style=for-the-badge&logo=flask&labelColor=black)](https://flask.palletsprojects.com/en/1.1.x/)
+[![MongoDB](http://img.shields.io/badge/-MongoDB-49A24C?style=for-the-badge&logo=mongodb&labelColor=F8F8F8)](https://www.mongodb.com/)
 
 Currently progress:
 
