@@ -16,14 +16,15 @@ Suara (20), Indonesia. College (4th). Beginner in programming and GitHub. Growin
 [![Flask](http://img.shields.io/badge/-Flask-F8F8F8?style=for-the-badge&logo=flask&labelColor=black)](https://flask.palletsprojects.com/en/1.1.x/)
 [![MongoDB](http://img.shields.io/badge/-MongoDB-49A24C?style=for-the-badge&logo=mongodb&labelColor=F8F8F8)](https://www.mongodb.com/)
 
-Currently progress:
+<!-- Currently progress:
 
-![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact&theme=dracula&hide_border=true)
+![Suara's github top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suarasiy&layout=compact&theme=dracula&hide_border=true) -->
 
 ## 🌱 Tools
 
 [![Visual Studio](http://img.shields.io/badge/-Visual_Studio-5C2D91?style=for-the-badge&logo=Visual-Studio)](https://visualstudio.microsoft.com/)
 [![Visual Studio Code](http://img.shields.io/badge/-Visual_Studio_Code-007ACC?style=for-the-badge&logo=Visual-Studio-Code)](https://code.visualstudio.com/)
+[![Vim](http://img.shields.io/badge/-Vim-019733?style=for-the-badge&logo=vim)](https://www.vim.org/)
 [![Adobe Xd](http://img.shields.io/badge/-Adobe_Xd-FF61F6?style=for-the-badge&logo=adobe-xd&logoColor=black)](https://www.adobe.com/products/xd.html)
 [![Adobe Illustrator](http://img.shields.io/badge/-Adobe_Illustrator-FF9A00?style=for-the-badge&logo=adobe-illustrator&logoColor=black)](https://www.adobe.com/products/illustrator.html)
 [![Postman API](http://img.shields.io/badge/-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
@@ -31,18 +32,20 @@ Currently progress:
 
 ## 🌱 Sns
 
-<p style="color: #F95774; font-weight: 500">*Change dot (.) to (#)</p>
-
 [![Discord](http://img.shields.io/badge/-Suara.6359-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/)
-
 
 ## 🌱 Stats
 
-![Suara's trophy](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true)
+<!-- ![Suara's trophy](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true) -->
 
 ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=dracula&hide_border=true)
 
-[![Suara's github wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=dracula&hide_border=true&layout=compact)](https://wakatime.com/@suarasiy)
+<!-- [![Suara's github wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=dracula&hide_border=true&layout=compact)](https://wakatime.com/@suarasiy) -->
+
+[![Wakatime](http://img.shields.io/badge/-Wakatime-000?style=for-the-badge&logo=wakatime&logoColor=white)](https://wakatime.com/@suarasiy)
+[![Trophy](http://img.shields.io/badge/-Stats-512BD4?style=for-the-badge&logoColor=white)](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true)
+[![Git Stats](http://img.shields.io/badge/-Profile-3DDC84?style=for-the-badge&logoColor=white)](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=dracula&hide_border=true)
+
 <!-- ## Time -->
 <!-- [![Suara's wakatime tracker](https://wakatime.com/badge/github/suarasiy/suarasiy.svg)](https://wakatime.com/badge/github/suarasiy/suarasiy) -->
 
