@@ -38,7 +38,7 @@ Suara (20), Indonesia. College (4th). Beginner in programming and GitHub. Growin
 
 <!-- ![Suara's trophy](https://github-profile-trophy.vercel.app/?username=suarasiy&theme=dracula&margin-w=15&margin-h=15&column&no-frame=true) -->
 
-![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=dracula&hide_border=true)
+<!-- ![Suara's github stats](https://github-readme-stats.vercel.app/api?username=suarasiy&show_icons=true&theme=dracula&hide_border=true) -->
 
 <!-- [![Suara's github wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=suarasiy&theme=dracula&hide_border=true&layout=compact)](https://wakatime.com/@suarasiy) -->
 
