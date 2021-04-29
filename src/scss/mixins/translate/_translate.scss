@@ -1,0 +1,11 @@
+@mixin posXY($x: 0, $y: 0, $focus: none) {
+  @if $focus == 'left-bottom' {
+    left: 50%;
+    bottom: 0;
+  }
+  @if $focus == 'center' {
+    top: 50%;
+    left: 50%;
+  }
+  transform: translate(-$x, -$y);
+}

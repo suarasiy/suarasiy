@@ -1,0 +1,41 @@
+@use "../../vars/index.scss" as vars;
+
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin flex {
+  display: flex;
+  position: relative;
+}
+
+@mixin flex-args($width, $align, $justify) {
+  width: $width;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-row($width: fit-content, $align: flex-start, $justify: center) {
+  @include flex();
+  @include flex-args($width, $align, $justify);
+  flex-direction: row;
+}
+
+@mixin flex-column($width: 100%, $align: center, $justify-content: center) {
+  @include flex();
+  @include flex-args($width, $align, $justify);
+  flex-direction: column;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  background-color: vars.$color-primary-orange;
+}
+
+.flex-row {
+  @include flex-row();
+  &.full-width {
+    @include full-width();
+  }
+}

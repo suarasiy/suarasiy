@@ -1,0 +1,24 @@
+$color-background: #030d26;
+
+$color-primary-orange: #ffa633;
+$color-primary-red: #ff198c;
+
+$color-separator-off-light: #0f2b70;
+$color-separator-off-dimm: #1a2644;
+$color-line-separator: #1a2644;
+
+$font-color: #ffffff;
+$font-color-off: #43588d;
+
+$color-gradients: (
+  'gradient-1': (
+    linear-gradient(to right, $color-primary-orange, $color-primary-red),
+  ),
+  'gradient-2': (
+    linear-gradient(
+      to right,
+      $color-separator-off-light,
+      $color-separator-off-dimm
+    ),
+  ),
+);

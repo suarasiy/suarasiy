@@ -1,0 +1,26 @@
+@use "../../vars/index" as i;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: i.$font-default;
+}
+
+html {
+  background-color: i.$color-background;
+}
+
+button {
+  padding: 4px 7px;
+}
+
+a {
+  color: i.$font-color;
+  text-decoration: none;
+}

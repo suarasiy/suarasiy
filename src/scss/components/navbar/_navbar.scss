@@ -1,0 +1,51 @@
+@use "../../mixins/index.scss" as mix;
+
+@mixin separator-indicator($gradient) {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: map-get($map: mix.$color-gradients, $key: $gradient);
+  @include mix.posXY(50%, -70%, 'left-bottom');
+}
+
+@mixin navbar-link($state: true) {
+  @if $state == false {
+    color: mix.$font-color-off;
+  }
+  @if $state {
+    color: mix.$font-color;
+  }
+  position: relative;
+  padding: 12px 17px;
+  margin: 0 8px;
+  font-family: mix.$fonts-navbar-link;
+  font-size: mix.$fonts-navbar-link-size;
+}
+
+.navbar {
+  @include mix.flex-row();
+  &.full-width {
+    @include mix.full-width();
+  }
+  padding: 12px 10px;
+
+  #{&}--link-on {
+    @include navbar-link();
+    &::after {
+      @include separator-indicator('gradient-1');
+    }
+  }
+
+  #{&}--link-off {
+    @include navbar-link(false);
+    &::after {
+      @include separator-indicator('gradient-2');
+    }
+  }
+
+  .flex-row.sectors {
+    border-bottom: 2px solid mix.$color-line-separator;
+  }
+}
