@@ -1,27 +1,42 @@
 @use "../../mixins/index.scss" as mix;
 
-@mixin separator-indicator($gradient) {
+@mixin separator-indicator($gradient, $isActive: false) {
   content: '';
   position: absolute;
-  width: 100%;
   height: 4px;
   border-radius: 5px;
   background: map-get($map: mix.$color-gradients, $key: $gradient);
-  @include mix.posXY(50%, -70%, 'left-bottom');
+  @if $isActive {
+    @include mix.posXY(50%, -70%, 'left-bottom');
+    width: 100%;
+  }
+  @if $isActive == false {
+    @include mix.posXY(50%, -150%, 'left-bottom');
+    width: 25%;
+  }
+  transition: width 0.2s mix.$transition-navigation-menu 0s,
+    transform 2s mix.$transition-navigation-menu 0s;
 }
 
 @mixin navbar-link($state: true) {
   @if $state == false {
     color: mix.$font-color-off;
+    transform: scale(0.9);
+    &:hover {
+      color: mix.$font-color-off-hover;
+    }
   }
   @if $state {
     color: mix.$font-color;
+    transform: scale(1);
   }
+  font-size: mix.$fonts-navbar-link-size;
   position: relative;
   padding: 12px 17px;
   margin: 0 8px;
   font-family: mix.$fonts-navbar-link;
-  font-size: mix.$fonts-navbar-link-size;
+  transition: transform 0.2s mix.$transition-navigation-menu 0s,
+    color 0.3s ease-in-out 0s;
 }
 
 .navbar {
@@ -34,18 +49,19 @@
   #{&}--link-on {
     @include navbar-link();
     &::after {
-      @include separator-indicator('gradient-1');
+      @include separator-indicator('gradient-1', true);
     }
   }
 
   #{&}--link-off {
     @include navbar-link(false);
     &::after {
-      @include separator-indicator('gradient-2');
+      @include separator-indicator('gradient-2', false);
     }
   }
 
   .flex-row.sectors {
+    align-items: flex-end;
     border-bottom: 2px solid mix.$color-line-separator;
   }
 }
