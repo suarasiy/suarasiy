@@ -1,0 +1,6 @@
+@use "../../mixins/index.scss" as mix;
+
+.profile-container {
+  @include mix.flex-do-col($p-all: true, $p-top: 20);
+  @include mix.full-width();
+}

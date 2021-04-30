@@ -15,16 +15,72 @@
   justify-content: $justify;
 }
 
-@mixin flex-row($width: fit-content, $align: flex-start, $justify: center) {
+@mixin flex-row(
+  $width: fit-content,
+  $align: flex-start,
+  $justify-content: center
+) {
   @include flex();
-  @include flex-args($width, $align, $justify);
+  @include flex-args($width, $align, $justify-content);
   flex-direction: row;
 }
 
 @mixin flex-column($width: 100%, $align: center, $justify-content: center) {
   @include flex();
-  @include flex-args($width, $align, $justify);
+  @include flex-args($width, $align, $justify-content);
   flex-direction: column;
+}
+
+@mixin set-padding(
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $x: 0,
+  $y: 0,
+  $all: false
+) {
+  @if $all == false {
+    padding: #{$top}px #{$right}px #{$bottom}px #{$left}px;
+  }
+  @if $all == true {
+    padding: #{$top}px;
+  }
+  @if $all == 'x' {
+    padding: #{$top}px #{$x}px #{$bottom}px #{$x}px;
+  }
+  @if $all == 'y' {
+    padding: #{$y}px #{$right}px #{$y}px #{$left}px;
+  }
+}
+
+@mixin set-margin(
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $x: 0,
+  $y: 0,
+  $all: false
+) {
+  @if $all == false {
+    margin: #{$top}px #{$right}px #{$bottom}px #{$left}px;
+  }
+  @if $all == true {
+    margin: #{$top}px;
+  }
+  @if $all == 'x' {
+    margin: #{$top}px #{$x}px #{$bottom}px #{$x}px;
+  }
+  @if $all == 'y' {
+    margin: #{$y}px #{$right}px #{$y}px #{$left}px;
+  }
+}
+
+@for $i from 1 to 21 {
+  .padding-#{$i} {
+    padding: #{$i}px;
+  }
 }
 
 .App {
@@ -33,9 +89,60 @@
   background-color: vars.$color-primary-orange;
 }
 
-.flex-row {
-  @include flex-row();
+@mixin flex-do-row(
+  $width: fit-content,
+  $align: flex-start,
+  $justify-content: center,
+  $p-top: 0,
+  $p-right: 0,
+  $p-bottom: 0,
+  $p-left: 0,
+  $p-all: false
+) {
+  @include flex-row(
+    $width: $width,
+    $align: $align,
+    $justify-content: $justify-content
+  );
+  @include set-padding(
+    $top: $p-top,
+    $right: $p-right,
+    $bottom: $p-bottom,
+    $left: $p-left,
+    $all: $p-all
+  );
   &.full-width {
     @include full-width();
   }
+}
+
+@mixin flex-do-col(
+  $width: 100%,
+  $align: center,
+  $justify-content: center,
+  $p-top: 0,
+  $p-right: 0,
+  $p-bottom: 0,
+  $p-left: 0,
+  $p-all: false
+) {
+  @include flex-column(
+    $width: $width,
+    $align: $align,
+    $justify-content: $justify-content
+  );
+  @include set-padding(
+    $top: $p-top,
+    $right: $p-right,
+    $bottom: $p-bottom,
+    $left: $p-left,
+    $all: $p-all
+  );
+  &.full-width {
+    @include full-width();
+  }
+}
+
+.log {
+  border: 1px solid red;
 }

@@ -41,6 +41,7 @@
 
 .navbar {
   @include mix.flex-row();
+  @include mix.full-width();
   &.full-width {
     @include mix.full-width();
   }
@@ -49,19 +50,19 @@
   #{&}--link-on {
     @include navbar-link();
     &::after {
-      @include separator-indicator('gradient-1', true);
+      @include separator-indicator('gradient-1-to-right', true);
     }
   }
 
   #{&}--link-off {
     @include navbar-link(false);
     &::after {
-      @include separator-indicator('gradient-2', false);
+      @include separator-indicator('gradient-2-to-right', false);
     }
   }
 
-  .flex-row.sectors {
-    align-items: flex-end;
+  .sectors {
+    @include mix.flex-do-row($align: flex-end);
     border-bottom: 2px solid mix.$color-line-separator;
   }
 }

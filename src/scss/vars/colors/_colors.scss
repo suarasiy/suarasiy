@@ -12,12 +12,22 @@ $font-color-off: #43588d;
 $font-color-off-hover: #556ba1;
 
 $color-gradients: (
-  'gradient-1': (
+  'gradient-1-to-right': (
     linear-gradient(to right, $color-primary-orange, $color-primary-red),
   ),
-  'gradient-2': (
+  'gradient-1-to-bottom-right': (
+    linear-gradient(to bottom right, $color-primary-orange, $color-primary-red),
+  ),
+  'gradient-2-to-right': (
     linear-gradient(
       to right,
+      $color-separator-off-light,
+      $color-separator-off-dimm
+    ),
+  ),
+  'gradient-2-to-bottom-right': (
+    linear-gradient(
+      to bottom right,
       $color-separator-off-light,
       $color-separator-off-dimm
     ),

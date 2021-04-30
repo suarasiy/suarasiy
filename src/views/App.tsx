@@ -8,7 +8,7 @@ import '../scss/index.scss';
 import Navbar from '../components/navbar/Navbar';
 
 // views
-import ProfileViews from './profile/index';
+import ProfileView from './profile/index';
 
 const route = [
   { label: 'Profile', url: '/profile', active: true },
@@ -19,8 +19,9 @@ const route = [
 function App() {
   return (
     <Router>
+      <Navbar route={route} />
       <Switch>
-        <Navbar route={route} />
+        <Route path="/profile" exact component={ProfileView} />
         <Route path="/images" exact component={ImagesView} />
       </Switch>
     </Router>

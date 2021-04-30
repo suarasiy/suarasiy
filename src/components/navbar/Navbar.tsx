@@ -1,6 +1,6 @@
 // core
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // interface
 import { NavbarProps } from './interface/interface';
@@ -10,6 +10,7 @@ import '../../scss/index.scss';
 
 const Navbar: React.FC<NavbarProps> = ({ ...NavbarProps }): JSX.Element => {
   const [url, setUrl] = useState(NavbarProps.route);
+  const location = useLocation();
 
   const urlHandler = (index: number): any => {
     const urls = url;
@@ -20,12 +21,11 @@ const Navbar: React.FC<NavbarProps> = ({ ...NavbarProps }): JSX.Element => {
     newurl.active = true;
     urls[index] = newurl;
     setUrl(urls);
-    console.log(url);
   };
 
   return (
-    <div className="navbar full-width">
-      <div className="flex-row sectors">
+    <div className="navbar">
+      <div className="sectors">
         {url.map((route, index) => (
           <Link
             key={index}

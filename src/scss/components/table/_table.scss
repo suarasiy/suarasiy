@@ -1,0 +1,26 @@
+@use "../../mixins/index.scss" as mix;
+
+.profile-table {
+  @include mix.set-margin($all: 'y', $y: 30);
+  @include mix.full-width();
+  font-size: 1.2rem;
+  border-collapse: collapse;
+  tr {
+    border-bottom: 2px solid mix.$color-line-separator;
+  }
+  th {
+    padding: 8px 7px 8px 5px;
+    text-align: right;
+    vertical-align: top;
+    font-family: map-get($map: mix.$fonts, $key: 'Exo 2');
+    font-weight: 600;
+    width: min-content;
+  }
+  td {
+    color: mix.$color-primary-orange;
+    padding: 8px 5px;
+    font-family: map-get($map: mix.$fonts, $key: 'Raleway');
+    font-weight: 400;
+    width: 80%;
+  }
+}

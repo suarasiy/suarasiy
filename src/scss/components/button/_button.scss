@@ -1,0 +1,14 @@
+@use "../../mixins/index.scss" as mix;
+
+.button-navigation {
+  @include mix.full-width();
+  @include mix.set-padding($all: true, $top: 20);
+  border: 1px solid mix.$color-separator-off-light;
+  &:hover {
+    background: map-get(
+      $map: mix.$color-gradients,
+      $key: 'gradient-2-to-right'
+    );
+    box-shadow: 0 0 24px -2.5px mix.$color-separator-off-light;
+  }
+}
