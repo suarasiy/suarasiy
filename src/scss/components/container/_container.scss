@@ -5,6 +5,21 @@
   @include mix.full-width();
 }
 
+.images-container {
+  @include mix.flex-do-col($p-all: true, $p-top: 20);
+  @include mix.full-width();
+
+  .gallery {
+    @include mix.flex-do-row();
+    @include mix.full-width();
+  }
+}
+
+.music-container {
+  @include mix.flex-do-col($p-all: true, $p-top: 20);
+  @include mix.full-width();
+}
+
 .footer-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
 
@@ -21,5 +36,20 @@
   }
   span.icon {
     margin: 15px 10px;
+  }
+}
+
+.button-navigation-container {
+  @include mix.flex-do-row($justify-content: space-around);
+  @include mix.full-width();
+
+  > a {
+    margin: 0 10px;
+    &:first-child {
+      margin: 0 10px 0 0;
+    }
+    &:last-child {
+      margin: 0 0 0 10px;
+    }
   }
 }

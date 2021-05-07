@@ -10,6 +10,8 @@ import Footer from '../components/footer/Footer';
 
 // views
 import ProfileView from './profile/index';
+import ImagesView from './images/index';
+import MusicView from './music/index';
 
 const route = [
   { label: 'Profile', url: '/profile', active: true },
@@ -24,6 +26,7 @@ function App() {
       <Switch>
         <Route path="/profile" exact component={ProfileView} />
         <Route path="/images" exact component={ImagesView} />
+        <Route path="/music" exact component={MusicView} />
       </Switch>
       <Footer />
     </Router>
@@ -31,7 +34,3 @@ function App() {
 }
 
 export default App;
-
-const ImagesView = () => {
-  return <p>Images View Pages</p>;
-};

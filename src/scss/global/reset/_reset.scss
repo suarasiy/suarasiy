@@ -12,6 +12,26 @@
   scroll-behavior: smooth;
   font-family: i.$font-default;
   color: i.$font-color;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: i.$color-background;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: i.$color-separator-off-dimm;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: i.$color-separator-off-light;
+  }
 }
 
 html {

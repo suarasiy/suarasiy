@@ -44,9 +44,11 @@ const Index: React.FC = () => {
           </tr>
         </tbody>
       </table>
-      <Link to="/images">
-        <button className="button-navigation">NEXT</button>
-      </Link>
+      <div className="button-navigation-container">
+        <Link to="/images">
+          <button className="button-navigation">NEXT</button>
+        </Link>
+      </div>
     </div>
   );
 };
