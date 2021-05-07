@@ -4,3 +4,22 @@
   @include mix.flex-do-col($p-all: true, $p-top: 20);
   @include mix.full-width();
 }
+
+.footer-container {
+  @include mix.flex-do-col($p-all: true, $p-top: 20);
+
+  .divide-row {
+    @include mix.flex-do-row();
+    margin: 15px 10px;
+  }
+
+  span.author {
+    margin: 15px 10px;
+    font-family: mix.$fonts-navbar-link;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  }
+  span.icon {
+    margin: 15px 10px;
+  }
+}

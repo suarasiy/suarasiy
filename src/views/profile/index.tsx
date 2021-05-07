@@ -1,6 +1,9 @@
 import React from 'react';
 
 import imgprofile from '../../assets/images/img.jpg';
+
+import { Link } from 'react-router-dom';
+
 // import { ProfileProps } from './interface/interface';
 
 const Index: React.FC = () => {
@@ -41,7 +44,9 @@ const Index: React.FC = () => {
           </tr>
         </tbody>
       </table>
-      <button class="button-navigation">NEXT</button>
+      <Link to="/images">
+        <button className="button-navigation">NEXT</button>
+      </Link>
     </div>
   );
 };

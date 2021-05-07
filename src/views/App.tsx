@@ -6,6 +6,7 @@ import '../scss/index.scss';
 
 // components
 import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 
 // views
 import ProfileView from './profile/index';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/profile" exact component={ProfileView} />
         <Route path="/images" exact component={ImagesView} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
