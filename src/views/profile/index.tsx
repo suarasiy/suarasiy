@@ -1,46 +1,60 @@
-import React from 'react';
-// import { ProfileProps } from './interface/interface';
+import React, { useState, useEffect } from 'react';
+import { ProfileProps } from './interface/interface';
+
+import Axios from 'axios';
 
 import imgprofile from '../../assets/images/img.jpg';
 
 import ButtonNavigation from '../../components/button-navigation/index';
 
 const Index: React.FC = () => {
+  const [data, setData] = useState<ProfileProps>();
+
+  useEffect(() => {
+    Axios.get(
+      'https://raw.githubusercontent.com/suarasiy/myprofile/master/profile.json?token=AOC5TTX4RMHNPRQBM5KTEATAT5VMC'
+    ).then((res) => setData(res.data));
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <div className="profile-container">
       <div className="avatar-container">
-        <img src={imgprofile} alt="profile" />
+        <img src={imgprofile} alt="profile" draggable={false} />
       </div>
       <div className="table-container">
         <table className="profile-table">
           <tbody>
             <tr>
               <th>Name :</th>
-              <td>My Name</td>
+              <td>{data?.fullName}</td>
             </tr>
             <tr>
               <th>Age :</th>
-              <td>My Age</td>
+              <td>{data?.age}</td>
             </tr>
             <tr>
               <th>Location :</th>
-              <td>My location</td>
+              <td>{data?.location}</td>
             </tr>
             <tr>
               <th>Passion :</th>
-              <td>JavaScript Frontend & Backend, UIX</td>
+              <td>{data?.passion}</td>
             </tr>
             <tr>
               <th>Level :</th>
-              <td>Beginner</td>
+              <td>{data?.level}</td>
             </tr>
             <tr>
               <th>Bio :</th>
-              <td>My short bio</td>
+              <td>{data?.bio}</td>
             </tr>
             <tr>
               <th>I like :</th>
-              <td>Learning</td>
+              <td>{data?.liked}</td>
             </tr>
           </tbody>
         </table>
