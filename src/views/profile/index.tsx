@@ -1,10 +1,9 @@
 import React from 'react';
+// import { ProfileProps } from './interface/interface';
 
 import imgprofile from '../../assets/images/img.jpg';
 
-import { Link } from 'react-router-dom';
-
-// import { ProfileProps } from './interface/interface';
+import ButtonNavigation from '../../components/button-navigation/index';
 
 const Index: React.FC = () => {
   return (
@@ -46,10 +45,13 @@ const Index: React.FC = () => {
           </tbody>
         </table>
       </div>
-      <div className="button-navigation-container">
-        <Link to="/images" draggable={false}>
-          <button className="button-navigation">NEXT</button>
-        </Link>
+      <div className="buttons-navigation-container">
+        <ButtonNavigation
+          navigations={[
+            { url: '/music', label: 'Music', state: 'previous' },
+            { url: '/images', label: 'Images', state: 'next' },
+          ]}
+        />
       </div>
     </div>
   );

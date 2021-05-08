@@ -34,7 +34,23 @@
 
 .images-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
-  @include mix.full-width();
+
+  @include mix.breakpoint(desktop) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  @include mix.breakpoint(md-desktop) {
+    width: 1080px;
+  }
+
+  @include mix.breakpoint(sm-desktop) {
+    width: 870px;
+  }
+
+  @include mix.breakpoint(laptop) {
+    @include mix.full-width();
+  }
 
   .gallery {
     @include mix.flex-do-row();
@@ -125,11 +141,40 @@
 
 .music-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
-  @include mix.full-width();
+
+  @include mix.breakpoint(desktop) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  @include mix.breakpoint(md-desktop) {
+    width: 1080px;
+  }
+
+  @include mix.breakpoint(sm-desktop) {
+    width: 870px;
+  }
+
+  @include mix.breakpoint(laptop) {
+    @include mix.full-width();
+  }
 }
 
 .footer-container {
-  @include mix.flex-do-col($p-all: true, $p-top: 20);
+  @include mix.breakpoint(desktop) {
+    @include mix.flex-do-row(
+      $p-all: true,
+      $p-top: 20,
+      $align: center,
+      $justify-content: space-around
+    );
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include mix.breakpoint(laptop) {
+    @include mix.flex-do-col($p-all: true, $p-top: 20);
+  }
 
   .divide-row {
     @include mix.flex-do-row();

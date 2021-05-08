@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import ButtonNavigation from '../../components/button-navigation/index';
 
 import Avatar from '../../assets/images/img.jpg';
 
@@ -40,12 +40,20 @@ const Index: React.FC = () => {
         </div>
       </div>
       <div className="buttons-navigation-container">
-        <Link to="/profile" draggable={false}>
-          <button className="button-navigation">BACK</button>
-        </Link>
-        <Link to="/music" draggable={false}>
-          <button className="button-navigation">NEXT</button>
-        </Link>
+        <ButtonNavigation
+          navigations={[
+            {
+              url: '/profile',
+              label: 'Profile',
+              state: 'previous',
+            },
+            {
+              url: '/music',
+              label: 'Music',
+              state: 'next',
+            },
+          ]}
+        />
       </div>
     </div>
   );
