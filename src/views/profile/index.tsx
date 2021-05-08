@@ -16,10 +16,6 @@ const Index: React.FC = () => {
     ).then((res) => setData(res.data));
   }, []);
 
-  useEffect(() => {
-    // console.log(data);
-  }, [data]);
-
   return (
     <div className="profile-container">
       <div className="avatar-container">
