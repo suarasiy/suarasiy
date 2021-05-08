@@ -41,4 +41,16 @@
     object-fit: cover;
     object-position: center center;
   }
+
+  @include mix.breakpoint(desktop) {
+    position: absolute;
+    top: 57px;
+    left: 67px;
+  }
+
+  @include mix.breakpoint(laptop) {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
 }

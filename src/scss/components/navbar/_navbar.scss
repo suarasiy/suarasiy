@@ -54,6 +54,16 @@
     }
   }
 
+  @include mix.breakpoint(desktop) {
+    width: fit-content;
+    margin: 0 0 0 420px;
+  }
+
+  @include mix.breakpoint(sm-desktop) {
+    width: 100%;
+    margin: 0;
+  }
+
   #{&}--link-off {
     @include navbar-link(false);
     &::after {

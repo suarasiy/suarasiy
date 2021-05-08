@@ -1,5 +1,34 @@
-// >> 1080px
-// 1080px
-// 720px
-// 705px
-// 485px
+$desktop-size: 1920px;
+$desktop-md-size: 1724px;
+$desktop-sm-size: 1602px;
+
+$laptop-size: 980px;
+$tablet-size: 580px;
+
+@mixin breakpoint($point) {
+  @if ($point == desktop) {
+    @media screen and (max-width: $desktop-size) {
+      @content;
+    }
+  }
+  @if ($point == md-desktop) {
+    @media screen and (max-width: $desktop-md-size) {
+      @content;
+    }
+  }
+  @if ($point == sm-desktop) {
+    @media screen and (max-width: $desktop-sm-size) {
+      @content;
+    }
+  }
+  @if ($point == laptop) {
+    @media screen and (max-width: $laptop-size) {
+      @content;
+    }
+  }
+  @if ($point == tablet) {
+    @media screen and (max-width: $tablet-size) {
+      @content;
+    }
+  }
+}

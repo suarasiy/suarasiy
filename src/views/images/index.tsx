@@ -39,11 +39,11 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="button-navigation-container">
-        <Link to="/profile">
+      <div className="buttons-navigation-container">
+        <Link to="/profile" draggable={false}>
           <button className="button-navigation">BACK</button>
         </Link>
-        <Link to="/music">
+        <Link to="/music" draggable={false}>
           <button className="button-navigation">NEXT</button>
         </Link>
       </div>

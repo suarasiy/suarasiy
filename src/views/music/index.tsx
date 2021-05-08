@@ -7,7 +7,7 @@ const Index: React.FC = () => {
     <div className="music-container">
       <h1>Music Favorites goes Here</h1>
       <div className="button-navigation-container">
-        <Link to="/images">
+        <Link to="/images" draggable={false}>
           <button className="button-navigation">BACK</button>
         </Link>
       </div>

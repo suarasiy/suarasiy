@@ -2,7 +2,34 @@
 
 .profile-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
-  @include mix.full-width();
+  // @include mix.full-width();
+
+  @include mix.breakpoint(desktop) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  @include mix.breakpoint(md-desktop) {
+    width: 1080px;
+  }
+
+  @include mix.breakpoint(sm-desktop) {
+    width: 870px;
+  }
+
+  @include mix.breakpoint(laptop) {
+    @include mix.full-width();
+  }
+
+  .table-container {
+    @include mix.full-width();
+    @include mix.breakpoint(desktop) {
+      padding: 0 0 0 215px;
+    }
+    @include mix.breakpoint(laptop) {
+      padding: 0;
+    }
+  }
 }
 
 .images-container {
@@ -120,17 +147,47 @@
   }
 }
 
-.button-navigation-container {
-  @include mix.flex-do-row($justify-content: space-around);
+@mixin button-navigation-container($multiple: false, $justify: space-around) {
+  @include mix.flex-do-row($justify-content: $justify);
   @include mix.full-width();
 
-  > a {
-    margin: 0 10px;
-    &:first-child {
-      margin: 0 10px 0 0;
-    }
-    &:last-child {
-      margin: 0 0 0 10px;
+  @if ($multiple) {
+    > a {
+      margin: 0 10px;
+      &:first-child {
+        margin: 0 10px 0 0;
+      }
+      &:last-child {
+        margin: 0 0 0 10px;
+      }
     }
   }
+
+  @if ($multiple == false) {
+    > a {
+      margin: 0 0;
+    }
+  }
+}
+
+.button-navigation-container {
+  @include mix.breakpoint(desktop) {
+    @include button-navigation-container($multiple: false, $justify: flex-end);
+    > a {
+      width: fit-content;
+    }
+  }
+  @include mix.breakpoint(sm-desktop) {
+    @include button-navigation-container(
+      $multiple: false,
+      $justify: space-around
+    );
+    > a {
+      width: 100%;
+    }
+  }
+}
+
+.buttons-navigation-container {
+  @include button-navigation-container($multiple: true);
 }

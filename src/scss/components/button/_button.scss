@@ -11,4 +11,8 @@
     );
     box-shadow: 0 0 24px -2.5px mix.$color-separator-off-light;
   }
+
+  @include mix.breakpoint(desktop) {
+    @include mix.set-padding($top: 20, $right: 50, $bottom: 20, $left: 50);
+  }
 }
