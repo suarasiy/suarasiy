@@ -35,7 +35,7 @@
       }
       @mixin divide-gallery($_flex: false, $flex: 22.2222%) {
         @include mix.flex-do-col();
-        margin: 8px;
+        margin: 0 8px;
 
         @if ($_flex) {
           flex: $flex;
@@ -43,18 +43,27 @@
       }
       &-3 {
         @include divide-gallery(true, 33.3333%);
+        @media screen and (max-width: 705px) {
+          @include divide-gallery(true, 45.5555%);
+        }
         .ximg {
           @include ximg($width: 100%);
         }
       }
       &-2 {
         @include divide-gallery(true, 22.2222%);
+        @media screen and (max-width: 705px) {
+          @include divide-gallery(true, 15.1515%);
+        }
         .ximg {
           @include ximg($width: 100%);
         }
       }
       &-1 {
         @include divide-gallery(true, 11.1111%);
+        @media screen and (max-width: 705px) {
+          @include divide-gallery(true, 100%);
+        }
         .ximg {
           @include ximg($width: 100%);
           &:last-child {
