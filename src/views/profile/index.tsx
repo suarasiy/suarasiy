@@ -17,7 +17,7 @@ const Index: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
   }, [data]);
 
   return (
