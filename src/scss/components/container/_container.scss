@@ -2,7 +2,7 @@
 
 .profile-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
-  // @include mix.full-width();
+  transition: width 0.5s mix.$transition-width 0s;
 
   @include mix.breakpoint(desktop) {
     width: 1220px;
@@ -23,6 +23,7 @@
 
   .table-container {
     @include mix.full-width();
+    transition: 0.6s mix.$transition-width 0s;
     @include mix.breakpoint(desktop) {
       padding: 0 0 0 215px;
     }
@@ -34,6 +35,7 @@
 
 .images-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
+  transition: width 0.5s mix.$transition-width 0s;
 
   @include mix.breakpoint(desktop) {
     width: 1220px;
@@ -141,6 +143,7 @@
 
 .music-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
+  transition: width 0.5s mix.$transition-width 0s;
 
   @include mix.breakpoint(desktop) {
     width: 1220px;
@@ -161,6 +164,8 @@
 }
 
 .footer-container {
+  transition: width 0.7s mix.$transition-width 0s,
+    padding 0.6s mix.$transition-margin 0s;
   @include mix.breakpoint(desktop) {
     @include mix.flex-do-row(
       $p-all: true,
@@ -189,6 +194,11 @@
   }
   span.icon {
     margin: 15px 10px;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    transition: filter 0.2s mix.$transition-soft-end 0s;
+    &:hover {
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    }
   }
 }
 
