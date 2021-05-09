@@ -10,12 +10,12 @@ const Index: React.FC = () => {
         <ButtonNavigation
           navigations={[
             {
-              url: '/images',
+              url: '/suarasiy/images',
               label: 'Images',
               state: 'previous',
             },
             {
-              url: '/profile',
+              url: '/suarasiy/profile',
               label: 'Profile',
               state: 'next',
             },

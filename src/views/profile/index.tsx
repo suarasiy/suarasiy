@@ -16,6 +16,10 @@ const Index: React.FC = () => {
     ).then((res) => setData(res.data));
   }, []);
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <div className="profile-container">
       <div className="avatar-container">
@@ -58,8 +62,8 @@ const Index: React.FC = () => {
       <div className="buttons-navigation-container">
         <ButtonNavigation
           navigations={[
-            { url: '/music', label: 'Music', state: 'previous' },
-            { url: '/images', label: 'Images', state: 'next' },
+            { url: '/suarasiy/music', label: 'Music', state: 'previous' },
+            { url: '/suarasiy/images', label: 'Images', state: 'next' },
           ]}
         />
       </div>

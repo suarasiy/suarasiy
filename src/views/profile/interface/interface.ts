@@ -1,3 +1,8 @@
+export type ImagesType = {
+  title: string;
+  url: string;
+};
+
 export interface ProfileProps {
   fullName: string;
   age: number;
@@ -6,5 +11,5 @@ export interface ProfileProps {
   level: string | number;
   bio: string;
   liked: string | null;
-  images: string[] | null;
+  images: ImagesType[] | null;
 }

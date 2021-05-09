@@ -14,9 +14,9 @@ import ImagesView from './images/index';
 import MusicView from './music/index';
 
 const route = [
-  { label: 'Profile', url: '/profile', active: true },
-  { label: 'Images', url: '/images', active: false },
-  { label: 'Music', url: '/music', active: false },
+  { label: 'Profile', url: '/suarasiy/profile', active: true },
+  { label: 'Images', url: '/suarasiy/images', active: false },
+  { label: 'Music', url: '/suarasiy/music', active: false },
 ];
 
 function App() {
@@ -24,9 +24,9 @@ function App() {
     <Router>
       <Navbar route={route} />
       <Switch>
-        <Route path="/profile" exact component={ProfileView} />
-        <Route path="/images" exact component={ImagesView} />
-        <Route path="/music" exact component={MusicView} />
+        <Route path="/suarasiy/profile" exact component={ProfileView} />
+        <Route path="/suarasiy/images" exact component={ImagesView} />
+        <Route path="/suarasiy/music" exact component={MusicView} />
       </Switch>
       <Footer />
     </Router>
