@@ -57,6 +57,7 @@
   .gallery {
     @include mix.flex-do-row();
     @include mix.full-width();
+    margin-bottom: 15px;
     flex-wrap: wrap;
 
     .divide-gallery {
