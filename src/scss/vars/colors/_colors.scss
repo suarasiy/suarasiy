@@ -10,6 +10,9 @@ $color-line-separator: #1a2644;
 $color-image-background: #041236;
 $color-font-image: #4c6fc7;
 
+$color-audio-border: #3a71ff;
+$color-audio-progress-background: #1c419f;
+
 $font-color: #ffffff;
 $font-color-off: #43588d;
 $font-color-off-hover: #556ba1;
@@ -31,6 +34,13 @@ $color-gradients: (
   'gradient-2-to-bottom-right': (
     linear-gradient(
       to bottom right,
+      $color-separator-off-light,
+      $color-separator-off-dimm
+    ),
+  ),
+  'gradient-2-to-left': (
+    linear-gradient(
+      to left,
       $color-separator-off-light,
       $color-separator-off-dimm
     ),

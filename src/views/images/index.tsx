@@ -8,6 +8,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import ButtonNavigation from '../../components/button-navigation/index';
 
+import { resources } from '../../data';
+
 const Index: React.FC = () => {
   const [ximg1, setXimg1] = useState<ImagesType[]>([]);
   const [ximg2, setXimg2] = useState<ImagesType[]>([]);
@@ -52,9 +54,7 @@ const Index: React.FC = () => {
   };
 
   useEffect(() => {
-    Axios.get(
-      'https://raw.githubusercontent.com/suarasiy/myprofile/master/profile.json?token=AOC5TTX4RMHNPRQBM5KTEATAT5VMC'
-    ).then((res) => {
+    Axios.get(resources).then((res) => {
       JsonDataImageDivider(res.data);
     });
   }, []);

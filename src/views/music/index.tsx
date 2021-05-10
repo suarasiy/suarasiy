@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import Axios from 'axios';
+
+import { AudioPlayerProps } from '../../components/AudioPlayer/interface/interface';
+
+// import ReactPlayer from 'react-player';
+import AudioPlayer from '../../components/AudioPlayer/index';
 
 import ButtonNavigation from '../../components/button-navigation/index';
 
+import { resources } from '../../data/index';
+
 const Index: React.FC = () => {
+  const [music, setMusic] = useState<AudioPlayerProps>();
+
+  useEffect(() => {
+    Axios.get(resources).then((res) => setMusic(res.data));
+  }, []);
+
   return (
     <div className="music-container">
-      <h1>Music Favorites goes Here</h1>
+      <div className="musics">
+        {music?.musics?.map((music, index) => (
+          <AudioPlayer key={index} url={music.url} title={music.title} />
+        ))}
+      </div>
       <div className="buttons-navigation-container">
         <ButtonNavigation
           navigations={[

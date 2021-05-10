@@ -7,13 +7,13 @@ import imgprofile from '../../assets/images/img.jpg';
 
 import ButtonNavigation from '../../components/button-navigation/index';
 
+import { resources } from '../../data';
+
 const Index: React.FC = () => {
   const [data, setData] = useState<ProfileProps>();
 
   useEffect(() => {
-    Axios.get(
-      'https://raw.githubusercontent.com/suarasiy/myprofile/master/profile.json?token=AOC5TTX4RMHNPRQBM5KTEATAT5VMC'
-    ).then((res) => setData(res.data));
+    Axios.get(resources).then((res) => setData(res.data));
   }, []);
 
   return (

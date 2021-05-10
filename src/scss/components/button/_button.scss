@@ -5,7 +5,9 @@
   @include mix.set-padding($all: true, $top: 20);
   position: relative;
   border: 1px solid mix.$color-separator-off-light;
+  border-radius: 35px;
   overflow: hidden;
+  transition: 0.3s mix.$transition-soft-end 0s;
   &::after {
     content: '';
     position: absolute;
@@ -19,6 +21,7 @@
       transform: translate(7%, -50%) skew(-45deg);
     }
     background-color: rgba(0, 0, 0, 0.157);
+    border-radius: 25px;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -28,10 +31,18 @@
       box-shadow 0.2s mix.$transition-soft-end 0s;
   }
   &:hover {
-    background: map-get(
-      $map: mix.$color-gradients,
-      $key: 'gradient-2-to-right'
-    );
+    @if ($direction == to-left) {
+      background: map-get(
+        $map: mix.$color-gradients,
+        $key: 'gradient-2-to-right'
+      );
+    }
+    @if ($direction == to-right) {
+      background: map-get(
+        $map: mix.$color-gradients,
+        $key: 'gradient-2-to-left'
+      );
+    }
     box-shadow: 0 0 24px -2.5px mix.$color-separator-off-light;
     &::after {
       opacity: 1;
@@ -41,6 +52,7 @@
     > span {
       margin: 0 8px;
     }
+    transform: scale(1.0255);
   }
 
   @include mix.breakpoint(desktop) {
