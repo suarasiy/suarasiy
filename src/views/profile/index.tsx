@@ -16,14 +16,11 @@ const Index: React.FC = () => {
     ).then((res) => setData(res.data));
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   return (
     <div className="profile-container">
       <div className="avatar-container">
         <img src={imgprofile} alt="profile" draggable={false} />
+        <span></span>
       </div>
       <div className="table-container">
         <table className="profile-table">

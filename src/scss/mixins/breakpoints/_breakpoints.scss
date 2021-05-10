@@ -3,6 +3,7 @@ $desktop-md-size: 1724px;
 $desktop-sm-size: 1602px;
 
 $laptop-size: 980px;
+$tablet-lg-size: 705px;
 $tablet-size: 580px;
 
 @mixin breakpoint($point) {
@@ -28,6 +29,11 @@ $tablet-size: 580px;
   }
   @if ($point == tablet) {
     @media screen and (max-width: $tablet-size) {
+      @content;
+    }
+  }
+  @if ($point == lg-tablet) {
+    @media screen and (max-width: $tablet-lg-size) {
       @content;
     }
   }

@@ -13,7 +13,7 @@ const Index: React.FC<NavigationProps> = ({ ...NavigationProps }) => {
       {navigation.map((navigation, index) =>
         navigation.state === 'previous' ? (
           <Link key={index} to={navigation.url} draggable={false}>
-            <button className="button-navigation">
+            <button className="button-navigation--to-left">
               <HiArrowCircleLeft
                 size={18}
                 style={{ verticalAlign: 'middle' }}
@@ -23,7 +23,7 @@ const Index: React.FC<NavigationProps> = ({ ...NavigationProps }) => {
           </Link>
         ) : (
           <Link key={index} to={navigation.url} draggable={false}>
-            <button className="button-navigation">
+            <button className="button-navigation--to-right">
               <span>{navigation.label}</span>{' '}
               <HiArrowCircleRight
                 size={18}

@@ -1,6 +1,6 @@
 @use "../../mixins/index.scss" as mix;
 
-.button-navigation {
+@mixin button-navigation($direction: to-left) {
   @include mix.full-width();
   @include mix.set-padding($all: true, $top: 20);
   position: relative;
@@ -10,15 +10,22 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: -100%;
-    transform: translate(-7%, -50%) skew(-45deg);
+    @if ($direction == to-right) {
+      left: -100%;
+      transform: translate(-7%, -50%) skew(-45deg);
+    }
+    @if ($direction == to-left) {
+      left: 100%;
+      transform: translate(7%, -50%) skew(-45deg);
+    }
     background-color: rgba(0, 0, 0, 0.157);
     width: 100%;
     height: 100%;
     z-index: 0;
     opacity: 0;
     transition: opacity 0.2s linear 0s, left 0.5s mix.$transition-soft-end 0s,
-      transform 0.5s mix.$transition-soft-end 0s;
+      transform 0.5s mix.$transition-soft-end 0s,
+      box-shadow 0.2s mix.$transition-soft-end 0s;
   }
   &:hover {
     background: map-get(
@@ -47,5 +54,14 @@
     display: inline-block;
     vertical-align: middle;
     transition: margin 0.4s mix.$transition-margin 0s;
+  }
+}
+
+.button-navigation {
+  &--to-left {
+    @include button-navigation($direction: to-left);
+  }
+  &--to-right {
+    @include button-navigation($direction: to-right);
   }
 }

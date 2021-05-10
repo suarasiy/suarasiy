@@ -3,12 +3,12 @@ import Axios from 'axios';
 
 import { ProfileProps, ImagesType } from '../profile/interface/interface';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import ButtonNavigation from '../../components/button-navigation/index';
 
-import Avatar from '../../assets/images/img.jpg';
-
 const Index: React.FC = () => {
-  const [data, setData] = useState<ProfileProps>();
   const [ximg1, setXimg1] = useState<ImagesType[]>([]);
   const [ximg2, setXimg2] = useState<ImagesType[]>([]);
   const [ximg3, setXimg3] = useState<ImagesType[]>([]);
@@ -17,7 +17,6 @@ const Index: React.FC = () => {
     const data = dataprofile;
     let current: 'ximg1' | 'ximg2' | 'ximg3' = 'ximg1';
     data.images?.map((image) => {
-      console.log(current);
       if (current === 'ximg1') {
         current = 'ximg2';
         return setXimg1((ximg1) => [
@@ -56,16 +55,9 @@ const Index: React.FC = () => {
     Axios.get(
       'https://raw.githubusercontent.com/suarasiy/myprofile/master/profile.json?token=AOC5TTX4RMHNPRQBM5KTEATAT5VMC'
     ).then((res) => {
-      setData(res.data);
       JsonDataImageDivider(res.data);
     });
   }, []);
-
-  useEffect(() => {
-    if (data !== undefined) {
-      console.log(data);
-    }
-  }, [data]);
 
   return (
     <div className="images-container">
@@ -73,21 +65,36 @@ const Index: React.FC = () => {
         <div className="divide-gallery-3">
           {ximg1.map((image, index) => (
             <div key={index} className="ximg">
-              <img src={image.url} alt={image.title} />
+              <LazyLoadImage
+                effect="blur"
+                src={image.url}
+                alt={image.title}
+                draggable={false}
+              />
             </div>
           ))}
         </div>
         <div className="divide-gallery-2">
           {ximg2.map((image, index) => (
             <div key={index} className="ximg">
-              <img src={image.url} alt={image.title} />
+              <LazyLoadImage
+                effect="blur"
+                src={image.url}
+                alt={image.title}
+                draggable={false}
+              />
             </div>
           ))}
         </div>
         <div className="divide-gallery-1">
-          {ximg1.map((image, index) => (
+          {ximg3.map((image, index) => (
             <div key={index} className="ximg">
-              <img src={image.url} alt={image.title} />
+              <LazyLoadImage
+                effect="blur"
+                src={image.url}
+                alt={image.title}
+                draggable={false}
+              />
             </div>
           ))}
         </div>
