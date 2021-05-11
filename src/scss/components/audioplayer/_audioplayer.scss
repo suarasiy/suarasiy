@@ -1,19 +1,38 @@
 @use "../../mixins/index.scss" as mix;
 
 @mixin audio-player($active: false) {
-  @include mix.flex-do-row(
-    $p-all: true,
-    $p-top: 20,
-    $width: 100%,
-    $justify-content: flex-start,
-    $align: center
-  );
   @if ($active) {
-    box-shadow: 0 6px 10px -2.2px rgba(mix.$color-audio-border, 0.7);
+    @include mix.flex-do-row(
+      $p-top: 40,
+      $p-right: 20,
+      $p-bottom: 40,
+      $p-left: 20,
+      $width: 100%,
+      $justify-content: flex-start,
+      $align: center
+    );
+
+    box-shadow: 0 7px 14px -1.6px rgba(mix.$color-audio-border, 0.7);
+    border: 1px solid mix.$color-audio-border;
   }
-  border: 1px solid mix.$color-audio-border;
+  @if ($active == false) {
+    @include mix.flex-do-row(
+      $p-all: true,
+      $p-top: 20,
+      $width: 100%,
+      $justify-content: flex-start,
+      $align: center
+    );
+
+    border: 1px solid mix.$color-audio-progress-background;
+  }
+
   border-radius: 5px;
   margin-bottom: 20px;
+
+  transition: box-shadow 0.4s mix.$transition-soft-end 0s,
+    padding 0.4s mix.$transition-soft-end 0s,
+    border 0.4s mix.$transition-soft-end 0s;
 
   &:last-child {
     margin-bottom: 0;
@@ -30,16 +49,39 @@
     .audio-control {
       @include mix.flex-do-row($align: center, $justify-content: flex-start);
       @include mix.full-width();
+      overflow: hidden;
       margin: 4px 0 0;
       transition: opacity 0.3s linear 0s,
         height 0.5s mix.$transition-soft-end 0s;
+      > button.button-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 2px 7px 2px 2px;
+        border-radius: 50%;
+        width: 41px;
+        height: 41px;
+        transition: background-color 0.4s mix.$transition-soft-end 0s;
+        &:active,
+        &:hover {
+          background-color: rgba(mix.$color-audio-border, 0.15);
+        }
+      }
     }
   }
 
   .progress-track {
+    border-radius: 4px;
+    margin: 0 4px;
     height: 4px;
-    width: 100%;
+    width: 150px;
     background-color: mix.$color-audio-progress-background;
+    transition: box-shadow 0.3s mix.$transition-soft-end 0s;
+    &:active,
+    &:hover {
+      box-shadow: 0 0 12px 0.5px #3a71ff;
+    }
   }
 }
 

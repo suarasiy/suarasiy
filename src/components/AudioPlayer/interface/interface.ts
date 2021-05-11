@@ -6,3 +6,11 @@ export type musics = {
 export interface AudioPlayerProps {
   musics: musics[];
 }
+
+export interface AudioControlsProps {
+  playing: boolean;
+  played: number;
+  playedSeconds: number;
+  volume: number;
+  muted: boolean;
+}

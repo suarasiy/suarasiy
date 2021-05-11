@@ -1,53 +1,83 @@
 import React, { useRef, useState } from 'react';
-// import { AudioPlayerProps } from './interface/interface';
+import { AudioControlsProps, musics } from './interface/interface';
 
 // ReactPlayer
 import ReactPlayer from 'react-player';
 
-// range
+// range-bar component
 import { Range, getTrackBackground } from 'react-range';
 
-import { musics } from './interface/interface';
-// icons
-import { BiPlayCircle, BiPauseCircle, BiSync } from 'react-icons/bi';
+// BoxIcons
+import {
+  BiReset,
+  BiVolume,
+  BiVolumeLow,
+  BiVolumeFull,
+  BiVolumeMute,
+} from 'react-icons/bi';
+
+// RemixIcons
+import { RiPlayCircleLine, RiPauseCircleLine } from 'react-icons/ri';
 
 const Index: React.FC<musics> = ({ ...musics }) => {
-  const [val, setVal] = useState([0.1]);
-  const [state, setState] = useState({
+  const [music] = useState(musics);
+
+  const [state, setState] = useState<AudioControlsProps>({
     playing: false,
     played: 0,
     playedSeconds: 0,
+    volume: 0.2,
+    muted: false,
   });
-
-  const [music] = useState(musics);
 
   const player = useRef<ReactPlayer>(null);
 
-  const handleToZero = () => {
+  const volumeIcon = state.muted ? (
+    <BiVolumeMute size={30} fill="#3A71FF" />
+  ) : state.volume <= 0 ? (
+    <BiVolume size={30} fill="#3A71FF" />
+  ) : state.volume <= 0.4 ? (
+    <BiVolumeLow size={30} fill="#3A71FF" />
+  ) : (
+    <BiVolumeFull size={30} fill="#3A71FF" />
+  );
+
+  const handleToZero = (): void => {
     player.current?.seekTo(0);
+  };
+
+  const handleVolume = (value: number): void => {
+    setState({ ...state, volume: value });
+  };
+
+  const handleMuteVolume = (): void => {
+    setState({ ...state, muted: !state.muted });
   };
 
   return (
     <div className={'audio-player'.concat(state.playing ? '-on' : '-off')}>
       <button onClick={() => setState({ ...state, playing: !state.playing })}>
         {state.playing ? (
-          <BiPauseCircle size={65} fill="#3A71FF" />
+          <RiPauseCircleLine size={65} fill="#3A71FF" />
         ) : (
-          <BiPlayCircle size={65} fill="#3A71FF" />
+          <RiPlayCircleLine size={65} fill="#3A71FF" />
         )}
       </button>
       <div className="audio-info">
         <span className="title">{music.title}</span>
         <div className="audio-control">
-          <button onClick={handleToZero}>
-            <BiSync size={30} fill="#3A71FF" />
+          <button className="button-icon" onClick={handleToZero}>
+            <BiReset size={30} fill="#3A71FF" />
+          </button>
+          <button className="button-icon" onClick={handleMuteVolume}>
+            {volumeIcon}
           </button>
           <Range
             step={0.05}
             min={0}
             max={1}
-            values={val}
-            onChange={(values) => setVal(values)}
+            values={[0.8]}
+            onChange={(values) => handleVolume(values[0])}
             renderTrack={({ props, children }) => (
               <div {...props} className="progress-track">
                 <div
@@ -55,7 +85,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
                   onTouchStart={props.onTouchStart}
                   style={{
                     ...props.style,
-                    height: '46px',
+                    height: '10px',
                     display: 'flex',
                     width: '100%',
                   }}
@@ -67,8 +97,8 @@ const Index: React.FC<musics> = ({ ...musics }) => {
                       width: '100%',
                       borderRadius: '4px',
                       background: getTrackBackground({
-                        values: val,
                         colors: ['#3A71FF', '#1c419f'],
+                        values: [state.volume],
                         min: 0,
                         max: 1,
                       }),
@@ -98,7 +128,8 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         width="0"
         height="0"
         playing={state.playing}
-        volume={0.1}
+        volume={state.volume}
+        muted={state.muted}
       />
     </div>
   );
