@@ -37,6 +37,7 @@
 
 html {
   background-color: i.$color-background;
+  overflow-y: scroll;
   &::before {
     content: '';
     position: fixed;
