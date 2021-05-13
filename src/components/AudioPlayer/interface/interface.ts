@@ -1,6 +1,7 @@
 export type musics = {
   title: string;
   url: string;
+  playing?: boolean;
 };
 
 export interface AudioPlayerProps {
@@ -13,4 +14,6 @@ export interface AudioControlsProps {
   playedSeconds: number;
   volume: number;
   muted: boolean;
+  duration: number;
+  ended: boolean;
 }

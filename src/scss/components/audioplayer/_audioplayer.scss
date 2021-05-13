@@ -1,6 +1,13 @@
 @use "../../mixins/index.scss" as mix;
 
 @mixin audio-player($active: false) {
+  position: relative;
+  overflow: hidden;
+
+  * {
+    z-index: 1;
+  }
+
   @if ($active) {
     @include mix.flex-do-row(
       $p-top: 40,
@@ -71,7 +78,7 @@
     }
   }
 
-  .progress-track {
+  .volume-track {
     border-radius: 4px;
     margin: 0 4px;
     height: 4px;
@@ -81,6 +88,26 @@
     &:active,
     &:hover {
       box-shadow: 0 0 12px 0.5px #3a71ff;
+    }
+  }
+
+  .progress-track-container {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(mix.$color-progress-track-container, 0.15);
+    overflow: hidden;
+    transition: width 0.4s mix.$transition-margin 0s,
+      opacity 0.3s mix.$transition-soft-end 0s;
+    .progress-track-fill {
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background-color: rgba(mix.$color-progress-track-fill, 0.25);
+      transition: width 0.8s mix.$transition-soft-end 0s;
     }
   }
 }
@@ -94,6 +121,9 @@
     opacity: 1;
     height: 46px;
   }
+  .progress-track-container {
+    width: 100%;
+  }
 }
 
 .audio-player-off {
@@ -104,5 +134,9 @@
   .audio-control {
     opacity: 0;
     height: 0;
+  }
+  .progress-track-container {
+    width: 0;
+    opacity: 0;
   }
 }

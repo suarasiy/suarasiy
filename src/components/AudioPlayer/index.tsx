@@ -19,18 +19,23 @@ import {
 // RemixIcons
 import { RiPlayCircleLine, RiPauseCircleLine } from 'react-icons/ri';
 
+const durationTransform = (n: number): number => {
+  return parseFloat((Math.round(n * 100) / 100).toFixed(2));
+};
+
 const Index: React.FC<musics> = ({ ...musics }) => {
   const [music] = useState(musics);
+  const player = useRef<ReactPlayer>(null);
 
   const [state, setState] = useState<AudioControlsProps>({
-    playing: false,
+    playing: music.playing!,
     played: 0,
     playedSeconds: 0,
     volume: 0.2,
     muted: false,
+    duration: 0,
+    ended: false,
   });
-
-  const player = useRef<ReactPlayer>(null);
 
   const volumeIcon = state.muted ? (
     <BiVolumeMute size={30} fill="#3A71FF" />
@@ -41,6 +46,21 @@ const Index: React.FC<musics> = ({ ...musics }) => {
   ) : (
     <BiVolumeFull size={30} fill="#3A71FF" />
   );
+
+  const handlePlay = (): void => {
+    setState({
+      ...state,
+      playing: !state.playing,
+    });
+  };
+
+  const handleUpdateDuration = (): void => {
+    setState({
+      ...state,
+      duration: player.current?.getDuration()!,
+    });
+    console.log(state.duration);
+  };
 
   const handleToZero = (): void => {
     player.current?.seekTo(0);
@@ -54,9 +74,17 @@ const Index: React.FC<musics> = ({ ...musics }) => {
     setState({ ...state, muted: !state.muted });
   };
 
+  const handleOnProgress = (event: any): void => {
+    setState({ ...state, playedSeconds: event.playedSeconds });
+  };
+
+  const handleOnEnded = (): void => {
+    setState({ ...state, playing: false, ended: true });
+  };
+
   return (
     <div className={'audio-player'.concat(state.playing ? '-on' : '-off')}>
-      <button onClick={() => setState({ ...state, playing: !state.playing })}>
+      <button onClick={handlePlay}>
         {state.playing ? (
           <RiPauseCircleLine size={65} fill="#3A71FF" />
         ) : (
@@ -64,7 +92,9 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         )}
       </button>
       <div className="audio-info">
-        <span className="title">{music.title}</span>
+        <span className="title">
+          {music.title} [{state.duration}]
+        </span>
         <div className="audio-control">
           <button className="button-icon" onClick={handleToZero}>
             <BiReset size={30} fill="#3A71FF" />
@@ -79,7 +109,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
             values={[0.8]}
             onChange={(values) => handleVolume(values[0])}
             renderTrack={({ props, children }) => (
-              <div {...props} className="progress-track">
+              <div {...props} className="volume-track">
                 <div
                   onMouseDown={props.onMouseDown}
                   onTouchStart={props.onTouchStart}
@@ -122,14 +152,31 @@ const Index: React.FC<musics> = ({ ...musics }) => {
           />
         </div>
       </div>
+      <span className="progress-track-container">
+        <span
+          className="progress-track-fill"
+          style={{
+            width: `${
+              !state.ended
+                ? (durationTransform(state.playedSeconds) * 100) /
+                  state.duration
+                : 0
+            }%`,
+          }}
+        ></span>
+      </span>
       <ReactPlayer
         ref={player}
         url={music.url}
         width="0"
         height="0"
+        onProgress={(event) => handleOnProgress(event)}
+        onEnded={handleOnEnded}
+        onPlay={() => setState({ ...state, ended: false })}
         playing={state.playing}
         volume={state.volume}
         muted={state.muted}
+        onReady={handleUpdateDuration}
       />
     </div>
   );
