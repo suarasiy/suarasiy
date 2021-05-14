@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   AudioControlsProps,
   AudioOnProgress,
@@ -12,6 +12,7 @@ import ReactPlayer from 'react-player';
 import { Range, getTrackBackground } from 'react-range';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 // BoxIcons
 import {
@@ -39,7 +40,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
   const player = useRef<ReactPlayer>(null);
 
   const [state, setState] = useState<AudioControlsProps>({
-    playing: music.playing!,
+    playing: musics.playing!, // since parent audio-container need only one to play audio, it's not used instead directly from props music interface
     played: 0,
     playedSeconds: 0,
     volume: 0.2,
@@ -57,13 +58,6 @@ const Index: React.FC<musics> = ({ ...musics }) => {
   ) : (
     <BiVolumeFull size={30} fill="#3A71FF" />
   );
-
-  const handlePlay = (): void => {
-    setState({
-      ...state,
-      playing: !state.playing,
-    });
-  };
 
   const handleUpdateDuration = (): void => {
     setState({
@@ -108,9 +102,10 @@ const Index: React.FC<musics> = ({ ...musics }) => {
   };
 
   return (
-    <div className={'audio-player'.concat(state.playing ? '-on' : '-off')}>
-      <button onClick={handlePlay}>
-        {state.playing ? (
+    <div className={'audio-player'.concat(musics.playing ? '-on' : '-off')}>
+      {/* <button onClick={handlePlay}> */}
+      <button onClick={music.onPlay}>
+        {musics.playing ? (
           <RiPauseCircleLine size={65} fill="#3A71FF" />
         ) : (
           <RiPlayCircleLine size={65} fill="#3A71FF" />
@@ -120,7 +115,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         <section>
           <span className="title">{music.title}</span>{' '}
           <span className="duration">
-            {state.playing
+            {musics.playing
               ? handleDurationLabel(durationTransform(state.playedSeconds, 0)) +
                 ' - '
               : null}
@@ -204,7 +199,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         ></span>
       </span>
       <div className="thumbnail">
-        <LazyLoadImage src={music.thumb} alt="Thumbnails" />
+        <LazyLoadImage src={music.thumb} effect="opacity" alt="Thumbnails" />
       </div>
       <ReactPlayer
         ref={player}
@@ -214,7 +209,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         onProgress={(event) => handleOnProgress(event)}
         onEnded={handleOnEnded}
         onPlay={() => setState({ ...state, ended: false })}
-        playing={state.playing}
+        playing={musics.playing}
         volume={state.volume}
         muted={state.muted}
         onReady={handleUpdateDuration}

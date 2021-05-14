@@ -139,6 +139,9 @@
         rgba(mix.$color-separator-off-dimm, 0)
       );
     }
+    > span.lazy-load-image-background {
+      display: unset !important;
+    }
     img {
       width: 100%;
       height: 100%;

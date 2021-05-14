@@ -3,6 +3,7 @@ export type musics = {
   url: string;
   playing?: boolean;
   thumb: string;
+  onPlay(): void;
 };
 
 export interface AudioPlayerProps {

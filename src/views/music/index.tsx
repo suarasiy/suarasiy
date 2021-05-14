@@ -26,12 +26,24 @@ const Index: React.FC = () => {
     if (typeof music !== undefined) {
       setState(music?.musics);
     }
-    if (typeof state !== undefined) {
-      state?.map((music, index) => {
-        return (state[index].playing = false);
-      });
+    // if (typeof state !== undefined) {
+    //   state?.map((music, index) => {
+    //     return (state[index].playing = false);
+    //   });
+    // }
+  }, [music]);
+
+  const handlePlay = (index: number) => {
+    if (state![index].playing === true) {
+      state![index].playing = false;
+      return setState([...state!]);
     }
-  }, [music, state]);
+    state?.map((music) => {
+      return (music.playing = false);
+    });
+    state![index].playing = true;
+    setState([...state!]);
+  };
 
   return (
     <div className="music-container">
@@ -43,6 +55,7 @@ const Index: React.FC = () => {
             title={music.title}
             thumb={music.thumb}
             playing={music.playing}
+            onPlay={() => handlePlay(index)}
           />
         ))}
       </div>
