@@ -1,11 +1,18 @@
 import React, { useRef, useState } from 'react';
-import { AudioControlsProps, musics } from './interface/interface';
+import {
+  AudioControlsProps,
+  AudioOnProgress,
+  musics,
+} from './interface/interface';
 
 // ReactPlayer
 import ReactPlayer from 'react-player';
 
 // range-bar component
 import { Range, getTrackBackground } from 'react-range';
+
+import Anime from '../../assets/images/setsuna-album.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // BoxIcons
 import {
@@ -17,10 +24,15 @@ import {
 } from 'react-icons/bi';
 
 // RemixIcons
-import { RiPlayCircleLine, RiPauseCircleLine } from 'react-icons/ri';
+import {
+  RiPlayCircleLine,
+  RiPauseCircleLine,
+  RiRewindLine,
+  RiSpeedLine,
+} from 'react-icons/ri';
 
-const durationTransform = (n: number): number => {
-  return parseFloat((Math.round(n * 100) / 100).toFixed(2));
+const durationTransform = (n: number, fixed: number = 2): number => {
+  return parseFloat((Math.round(n * 100) / 100).toFixed(fixed));
 };
 
 const Index: React.FC<musics> = ({ ...musics }) => {
@@ -59,7 +71,12 @@ const Index: React.FC<musics> = ({ ...musics }) => {
       ...state,
       duration: player.current?.getDuration()!,
     });
-    console.log(state.duration);
+  };
+
+  const handleDurationLabel = (n: number): string => {
+    let hours = Math.floor(n / 60);
+    let minutes = n % 60;
+    return hours + ':' + minutes;
   };
 
   const handleToZero = (): void => {
@@ -74,12 +91,21 @@ const Index: React.FC<musics> = ({ ...musics }) => {
     setState({ ...state, muted: !state.muted });
   };
 
-  const handleOnProgress = (event: any): void => {
+  const handleRewind = (): void => {
+    player.current?.seekTo(state.playedSeconds - 10);
+  };
+
+  const handleForward = (): void => {
+    player.current?.seekTo(state.playedSeconds + 10);
+  };
+
+  const handleOnProgress = (event: AudioOnProgress): void => {
     setState({ ...state, playedSeconds: event.playedSeconds });
   };
 
   const handleOnEnded = (): void => {
-    setState({ ...state, playing: false, ended: true });
+    setState({ ...state, playing: false, ended: true, playedSeconds: 0 });
+    console.log('ended : ', state.playedSeconds);
   };
 
   return (
@@ -92,12 +118,25 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         )}
       </button>
       <div className="audio-info">
-        <span className="title">
-          {music.title} [{state.duration}]
-        </span>
+        <section>
+          <span className="title">{music.title}</span>{' '}
+          <span className="duration">
+            {state.playing
+              ? handleDurationLabel(durationTransform(state.playedSeconds, 0)) +
+                ' - '
+              : null}
+            {handleDurationLabel(durationTransform(state.duration))}
+          </span>
+        </section>
         <div className="audio-control">
           <button className="button-icon" onClick={handleToZero}>
             <BiReset size={30} fill="#3A71FF" />
+          </button>
+          <button className="button-icon" onClick={handleRewind}>
+            <RiRewindLine size={30} fill="#3A71FF" />
+          </button>
+          <button className="button-icon" onClick={handleForward}>
+            <RiSpeedLine size={30} fill="#3A71FF" />
           </button>
           <button className="button-icon" onClick={handleMuteVolume}>
             {volumeIcon}
@@ -165,6 +204,9 @@ const Index: React.FC<musics> = ({ ...musics }) => {
           }}
         ></span>
       </span>
+      <div className="thumbnail">
+        <LazyLoadImage src={Anime} alt="Thumbnails" />
+      </div>
       <ReactPlayer
         ref={player}
         url={music.url}

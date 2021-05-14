@@ -17,3 +17,10 @@ export interface AudioControlsProps {
   duration: number;
   ended: boolean;
 }
+
+export interface AudioOnProgress {
+  played: number;
+  playedSeconds: number;
+  loaded: number;
+  loadedSeconds: number;
+}
