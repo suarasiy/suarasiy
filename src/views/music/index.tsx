@@ -41,6 +41,7 @@ const Index: React.FC = () => {
             key={index}
             url={music.url}
             title={music.title}
+            thumb={music.thumb}
             playing={music.playing}
           />
         ))}

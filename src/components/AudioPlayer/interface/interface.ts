@@ -2,6 +2,7 @@ export type musics = {
   title: string;
   url: string;
   playing?: boolean;
+  thumb: string;
 };
 
 export interface AudioPlayerProps {

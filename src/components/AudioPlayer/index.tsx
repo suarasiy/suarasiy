@@ -11,7 +11,6 @@ import ReactPlayer from 'react-player';
 // range-bar component
 import { Range, getTrackBackground } from 'react-range';
 
-import Anime from '../../assets/images/setsuna-album.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // BoxIcons
@@ -205,7 +204,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         ></span>
       </span>
       <div className="thumbnail">
-        <LazyLoadImage src={Anime} alt="Thumbnails" />
+        <LazyLoadImage src={music.thumb} alt="Thumbnails" />
       </div>
       <ReactPlayer
         ref={player}
