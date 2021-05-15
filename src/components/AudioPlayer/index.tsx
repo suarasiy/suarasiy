@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   AudioControlsProps,
   AudioOnProgress,
@@ -47,6 +47,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
     muted: false,
     duration: 0,
     ended: false,
+    onBuffer: false,
   });
 
   const volumeIcon = state.muted ? (
@@ -98,12 +99,16 @@ const Index: React.FC<musics> = ({ ...musics }) => {
 
   const handleOnEnded = (): void => {
     setState({ ...state, playing: false, ended: true, playedSeconds: 0 });
-    console.log('ended : ', state.playedSeconds);
+    music.onEnded();
+  };
+
+  const handleOnBuffer = (buffer: boolean): void => {
+    setState({ ...state, onBuffer: buffer });
   };
 
   return (
     <div className={'audio-player'.concat(musics.playing ? '-on' : '-off')}>
-      {/* <button onClick={handlePlay}> */}
+      {state.onBuffer ? <span className="on-buffer"></span> : null}
       <button onClick={music.onPlay}>
         {musics.playing ? (
           <RiPauseCircleLine size={65} fill="#3A71FF" />
@@ -190,7 +195,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
           className="progress-track-fill"
           style={{
             width: `${
-              !state.ended
+              !music.ended
                 ? (durationTransform(state.playedSeconds) * 100) /
                   state.duration
                 : 0
@@ -206,6 +211,8 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         url={music.url}
         width="0"
         height="0"
+        onBuffer={() => handleOnBuffer(true)}
+        onBufferEnd={() => handleOnBuffer(false)}
         onProgress={(event) => handleOnProgress(event)}
         onEnded={handleOnEnded}
         onPlay={() => setState({ ...state, ended: false })}

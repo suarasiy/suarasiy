@@ -7,12 +7,13 @@ import {
   musics,
 } from '../../components/AudioPlayer/interface/interface';
 
-// import ReactPlayer from 'react-player';
 import AudioPlayer from '../../components/AudioPlayer/index';
 
 import ButtonNavigation from '../../components/button-navigation/index';
 
 import { resources } from '../../data/index';
+
+import { ConsoleMusic } from '../../utils/console/index';
 
 const Index: React.FC = () => {
   const [music, setMusic] = useState<AudioPlayerProps>();
@@ -26,16 +27,32 @@ const Index: React.FC = () => {
     if (typeof music !== undefined) {
       setState(music?.musics);
     }
-    // if (typeof state !== undefined) {
-    //   state?.map((music, index) => {
-    //     return (state[index].playing = false);
-    //   });
-    // }
   }, [music]);
 
   const handlePlay = (index: number) => {
+    state?.map((music) => {
+      if (music.playing === true) {
+        if (music.title !== state![index].title) {
+          ConsoleMusic({
+            type: 'MUSIC',
+            status: 'PAUSED',
+            title: music.title,
+          });
+          ConsoleMusic({
+            type: 'MUSIC',
+            status: 'SWITCHING',
+            title: state![index].title,
+          });
+        }
+      }
+    });
     if (state![index].playing === true) {
       state![index].playing = false;
+      ConsoleMusic({
+        type: 'MUSIC',
+        status: 'PAUSED',
+        title: state![index].title,
+      });
       return setState([...state!]);
     }
     state?.map((music) => {
@@ -43,6 +60,23 @@ const Index: React.FC = () => {
     });
     state![index].playing = true;
     setState([...state!]);
+    ConsoleMusic({
+      type: 'MUSIC',
+      status: 'PLAYING',
+      title: state![index].title,
+    });
+  };
+
+  const handleEnded = (index: number): void => {
+    state?.map((music) => {
+      music.playing = false;
+    });
+    setState([...state!]);
+    ConsoleMusic({
+      type: 'MUSIC',
+      status: 'ENDED',
+      title: state![index].title,
+    });
   };
 
   return (
@@ -55,7 +89,9 @@ const Index: React.FC = () => {
             title={music.title}
             thumb={music.thumb}
             playing={music.playing}
+            ended={music.ended}
             onPlay={() => handlePlay(index)}
+            onEnded={() => handleEnded(index)}
           />
         ))}
       </div>

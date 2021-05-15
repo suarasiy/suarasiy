@@ -1,8 +1,36 @@
 @use "../../mixins/index.scss" as mix;
 
+@mixin on-buffer-animation {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(mix.$color-background, 0.6);
+  width: 103%;
+  height: 120%;
+  border-radius: 5px;
+  border: 1px solid mix.$color-audio-border;
+  animation: audioblob 2s infinite;
+  animation-timing-function: mix.$transition-soft-end;
+}
+
 @mixin audio-player($active: false) {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+
+  span.on-buffer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    &::before {
+      @include on-buffer-animation;
+    }
+  }
 
   * {
     z-index: 1;
@@ -103,6 +131,7 @@
     height: 100%;
     top: 50%;
     left: 0;
+    // border-radius: 5px;
     transform: translateY(-50%);
     background-color: rgba(mix.$color-progress-track-container, 0.15);
     overflow: hidden;
@@ -125,6 +154,8 @@
     width: 250px;
     height: 100%;
     z-index: -1;
+    border-radius: 0 3px 3px 0;
+    overflow: hidden;
     &::after {
       content: '';
       position: absolute;
@@ -178,6 +209,19 @@
   }
   .progress-track-container {
     width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes audioblob {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 104%;
+    height: 130%;
     opacity: 0;
   }
 }

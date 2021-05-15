@@ -3,7 +3,9 @@ export type musics = {
   url: string;
   playing?: boolean;
   thumb: string;
+  ended: boolean;
   onPlay(): void;
+  onEnded(): void;
 };
 
 export interface AudioPlayerProps {
@@ -18,6 +20,7 @@ export interface AudioControlsProps {
   muted: boolean;
   duration: number;
   ended: boolean;
+  onBuffer: boolean;
 }
 
 export interface AudioOnProgress {
