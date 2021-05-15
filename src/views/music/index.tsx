@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import Axios from 'axios';
 
+// bug on buffer start
+
 import {
   AudioPlayerProps,
   musics,
@@ -17,7 +19,7 @@ import { ConsoleMusic } from '../../utils/console/index';
 
 const Index: React.FC = () => {
   const [music, setMusic] = useState<AudioPlayerProps>();
-  const [state, setState] = useState<musics[] | undefined>([]);
+  const [state, setState] = useState<musics[]>([]);
 
   useEffect(() => {
     Axios.get(resources).then((res) => setMusic(res.data));
@@ -25,7 +27,7 @@ const Index: React.FC = () => {
 
   useEffect(() => {
     if (typeof music !== undefined) {
-      setState(music?.musics);
+      setState(music?.musics!);
     }
   }, [music]);
 
@@ -67,9 +69,19 @@ const Index: React.FC = () => {
     });
   };
 
+  const handleBufferStart = (index: number): void => {
+    state![index].bufferStatus = 'READY';
+    state?.map((music) => {
+      return (music.playing = false);
+    });
+    state![index].playing = true;
+    setState([...state!]);
+    console.log(state![index].bufferStatus);
+  };
+
   const handleEnded = (index: number): void => {
     state?.map((music) => {
-      music.playing = false;
+      return (music.playing = false);
     });
     setState([...state!]);
     ConsoleMusic({
@@ -90,8 +102,10 @@ const Index: React.FC = () => {
             thumb={music.thumb}
             playing={music.playing}
             ended={music.ended}
+            bufferStatus={music.bufferStatus}
             onPlay={() => handlePlay(index)}
             onEnded={() => handleEnded(index)}
+            onStart={() => handleBufferStart(index)}
           />
         ))}
       </div>

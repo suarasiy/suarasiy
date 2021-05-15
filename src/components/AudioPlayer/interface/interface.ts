@@ -4,8 +4,10 @@ export type musics = {
   playing?: boolean;
   thumb: string;
   ended: boolean;
+  bufferStatus: 'READY' | 'BUFFER';
   onPlay(): void;
   onEnded(): void;
+  onStart(): void;
 };
 
 export interface AudioPlayerProps {

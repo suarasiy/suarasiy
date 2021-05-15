@@ -43,7 +43,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
     playing: musics.playing!, // since parent audio-container need only one to play audio, it's not used instead directly from props music interface
     played: 0,
     playedSeconds: 0,
-    volume: 0.2,
+    volume: 0.4,
     muted: false,
     duration: 0,
     ended: false,
@@ -108,7 +108,9 @@ const Index: React.FC<musics> = ({ ...musics }) => {
 
   return (
     <div className={'audio-player'.concat(musics.playing ? '-on' : '-off')}>
-      {state.onBuffer ? <span className="on-buffer"></span> : null}
+      {state.onBuffer && musics.bufferStatus === 'READY' ? (
+        <span className="on-buffer"></span>
+      ) : null}
       <button onClick={music.onPlay}>
         {musics.playing ? (
           <RiPauseCircleLine size={65} fill="#3A71FF" />
@@ -212,6 +214,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
         width="0"
         height="0"
         onBuffer={() => handleOnBuffer(true)}
+        onStart={musics.onStart}
         onBufferEnd={() => handleOnBuffer(false)}
         onProgress={(event) => handleOnProgress(event)}
         onEnded={handleOnEnded}
