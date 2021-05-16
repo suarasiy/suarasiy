@@ -128,30 +128,30 @@ const Index: React.FC<musics> = ({ ...musics }) => {
       </button>
       <div className="audio-info">
         <section className="controls-wrap">
-          {musics.bufferStatus === 'READY' ? (
-            <RiCheckboxCircleFill
-              id="bufferStatus"
-              size={musics.playing ? 16 : 20}
-              fill="#3A71FF"
-              style={{
-                verticalAlign: 'middle',
-                marginRight: 8,
-                opacity: 1,
-                transition: '.3s cubic-bezier(0.29, 1, 0.52, 0.97) 0s',
-              }}
-            />
-          ) : (
-            <RiCheckboxCircleFill
-              id="bufferStatus"
-              size={1}
-              fill="#FFF"
-              style={{
-                verticalAlign: 'middle',
-                marginRight: 0,
-                opacity: 0,
-              }}
-            />
-          )}
+          <span id="bufferStatus">
+            {musics.bufferStatus === 'READY' ? (
+              <RiCheckboxCircleFill
+                size={musics.playing ? 16 : 20}
+                fill="#3A71FF"
+                style={{
+                  verticalAlign: 'middle',
+                  marginRight: 8,
+                  opacity: 1,
+                  transition: '.3s cubic-bezier(0.29, 1, 0.52, 0.97) 0s',
+                }}
+              />
+            ) : (
+              <RiCheckboxCircleFill
+                size={1}
+                fill="#FFF"
+                style={{
+                  verticalAlign: 'middle',
+                  marginRight: 0,
+                  opacity: 0,
+                }}
+              />
+            )}
+          </span>
           <span className="title">{music.title}</span>{' '}
           <span className="duration">
             {musics.playing

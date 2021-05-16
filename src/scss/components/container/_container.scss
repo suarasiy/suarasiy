@@ -156,12 +156,19 @@
 
 .music-container {
   @include mix.flex-do-col($p-all: true, $p-top: 20);
-  transition: width 0.5s mix.$transition-width 0s;
+  transition: width 0.5s mix.$transition-width 0s,
+    padding 0.3s mix.$transition-width 0s;
 
   .musics {
     @include mix.flex-do-col($p-all: true, $p-top: 20);
     @include mix.full-width();
     margin-bottom: 10px;
+
+    transition: padding 0.5s mix.$transition-width 0s;
+
+    @include mix.breakpoint(laptop) {
+      padding: 20px 0;
+    }
   }
 
   @include mix.breakpoint(desktop) {

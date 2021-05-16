@@ -111,7 +111,7 @@
       @if ($active) {
         @include mix.breakpoint(tablet) {
           position: absolute;
-          top: 8px;
+          top: 4px;
           left: 0;
         }
       }
@@ -299,7 +299,7 @@
     }
 
     @include mix.breakpoint(tablet) {
-      text-indent: 1.35rem;
+      text-indent: 1.4rem;
     }
   }
   .duration {
