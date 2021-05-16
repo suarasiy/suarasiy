@@ -47,6 +47,22 @@
       $align: center
     );
 
+    @include mix.breakpoint(lg-tablet) {
+      padding: 150px 20px 20px 20px;
+    }
+
+    @include mix.breakpoint(tablet) {
+      @include mix.flex-do-col(
+        $p-top: 150,
+        $p-right: 20,
+        $p-bottom: 20,
+        $p-left: 20,
+        $width: 100%,
+        $justify-content: center,
+        $align: flex-start
+      );
+    }
+
     box-shadow: 0 7px 14px -1.6px rgba(mix.$color-audio-border, 0.7);
     border: 1px solid mix.$color-audio-border;
   }
@@ -73,6 +89,47 @@
     margin-bottom: 0;
   }
 
+  #control-play {
+    padding: 0;
+    width: 75px;
+    height: 75px;
+
+    @include mix.breakpoint(tablet) {
+      @if ($active == false) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .controls-wrap {
+    width: 100%;
+
+    #bufferStatus {
+      transition: 0.6s mix.$transition-soft-end 0s;
+
+      @if ($active) {
+        @include mix.breakpoint(tablet) {
+          position: absolute;
+          top: 8px;
+          left: 0;
+        }
+      }
+    }
+
+    @include mix.breakpoint(sm-desktop) {
+      @include mix.flex-do-row(
+        $align: center,
+        $justify-content: flex-start,
+        $width: 70%
+      );
+    }
+
+    @include mix.breakpoint(lg-tablet) {
+      width: 100%;
+    }
+  }
+
   .title {
     transition: font-size 0.3s mix.$transition-soft-end 0s;
   }
@@ -84,8 +141,12 @@
   }
 
   .audio-info {
-    @include mix.flex-do-col($p-all: true, $p-top: 5px, $align: flex-start);
+    @include mix.flex-do-col($p-all: true, $p-top: 5, $align: flex-start);
     margin-left: 10px;
+
+    @include mix.breakpoint(tablet) {
+      margin-left: 0px;
+    }
 
     .audio-control {
       @include mix.flex-do-row($align: center, $justify-content: flex-start);
@@ -123,6 +184,10 @@
     &:hover {
       box-shadow: 0 0 12px 0.5px #3a71ff;
     }
+
+    @include mix.breakpoint(lg-tablet) {
+      width: 100%;
+    }
   }
 
   .progress-track-container {
@@ -156,6 +221,21 @@
     z-index: -1;
     border-radius: 0 3px 3px 0;
     overflow: hidden;
+    transition: transform 0.3s mix.$transition-soft-end 0s,
+      width 0.5s mix.$transition-soft-end 0s,
+      height 0.7s mix.$transition-soft-end;
+
+    @if ($active) {
+      @include mix.breakpoint(lg-tablet) {
+        top: 0;
+        right: 0;
+        left: 50%;
+        width: 100%;
+        height: 165px;
+        transform: translateX(-50%);
+      }
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -169,7 +249,19 @@
         rgba(mix.$color-background, 0.5),
         rgba(mix.$color-separator-off-dimm, 0)
       );
+
+      @if ($active) {
+        @include mix.breakpoint(lg-tablet) {
+          background: linear-gradient(
+            to top,
+            rgba(mix.$color-background, 1),
+            rgba(mix.$color-background, 0.5),
+            rgba(mix.$color-separator-off-dimm, 0)
+          );
+        }
+      }
     }
+
     > span.lazy-load-image-background {
       display: unset !important;
     }
@@ -186,8 +278,34 @@
 
 .audio-player-on {
   @include audio-player($active: true);
+  .controls-wrap {
+    @include mix.breakpoint(sm-desktop) {
+      @include mix.flex-do-col(
+        $width: 70%,
+        $align: flex-start,
+        $justify-content: center
+      );
+    }
+
+    @include mix.breakpoint(lg-tablet) {
+      width: 100%;
+    }
+  }
   .title {
     font-size: 14px;
+
+    @include mix.breakpoint(sm-desktop) {
+      margin: 6px 0 0;
+    }
+
+    @include mix.breakpoint(tablet) {
+      text-indent: 1.35rem;
+    }
+  }
+  .duration {
+    @include mix.breakpoint(sm-desktop) {
+      margin-left: 0;
+    }
   }
   .audio-control {
     opacity: 1;
@@ -202,6 +320,14 @@
   @include audio-player($active: false);
   .title {
     font-size: 17px;
+
+    @include mix.breakpoint(sm-desktop) {
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
   }
   .audio-control {
     opacity: 0;

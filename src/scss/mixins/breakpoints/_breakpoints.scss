@@ -3,7 +3,8 @@ $desktop-md-size: 1724px;
 $desktop-sm-size: 1602px;
 
 $laptop-size: 980px;
-$tablet-lg-size: 705px;
+$tablet-lg-size: 795px;
+$tablet-md-size: 705px;
 $tablet-size: 580px;
 
 @mixin breakpoint($point) {
@@ -27,13 +28,18 @@ $tablet-size: 580px;
       @content;
     }
   }
-  @if ($point == tablet) {
-    @media screen and (max-width: $tablet-size) {
+  @if ($point == lg-tablet) {
+    @media screen and (max-width: $tablet-lg-size) {
       @content;
     }
   }
-  @if ($point == lg-tablet) {
-    @media screen and (max-width: $tablet-lg-size) {
+  @if ($point == md-tablet) {
+    @media screen and (max-width: $tablet-md-size) {
+      @content;
+    }
+  }
+  @if ($point == tablet) {
+    @media screen and (max-width: $tablet-size) {
       @content;
     }
   }

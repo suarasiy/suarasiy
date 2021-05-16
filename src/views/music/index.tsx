@@ -21,17 +21,17 @@ const Index: React.FC = () => {
   const [music, setMusic] = useState<AudioPlayerProps>();
   const [state, setState] = useState<musics[]>([]);
 
-  useEffect(() => {
+  useEffect((): void => {
     Axios.get(resources).then((res) => setMusic(res.data));
   }, []);
 
-  useEffect(() => {
+  useEffect((): void => {
     if (typeof music !== undefined) {
       setState(music?.musics!);
     }
   }, [music]);
 
-  const handlePlay = (index: number) => {
+  const handlePlay = (index: number): void => {
     state?.map((music) => {
       if (music.playing === true) {
         if (music.title !== state![index].title) {
@@ -47,6 +47,7 @@ const Index: React.FC = () => {
           });
         }
       }
+      return null;
     });
     if (state![index].playing === true) {
       state![index].playing = false;
@@ -76,7 +77,6 @@ const Index: React.FC = () => {
     });
     state![index].playing = true;
     setState([...state!]);
-    console.log(state![index].bufferStatus);
   };
 
   const handleEnded = (index: number): void => {

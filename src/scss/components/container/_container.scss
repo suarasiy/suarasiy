@@ -76,7 +76,7 @@
         background-color: mix.$color-image-background;
         overflow: hidden;
         transition: height 0.4s mix.$transition-width 0s;
-        @include mix.breakpoint(lg-tablet) {
+        @include mix.breakpoint(md-tablet) {
           height: $height + 32px;
         }
         > span {
@@ -96,7 +96,7 @@
       }
       &-3 {
         @include divide-gallery(true, 33.3333%);
-        @include mix.breakpoint(lg-tablet) {
+        @include mix.breakpoint(md-tablet) {
           @include divide-gallery(true, 45.5555%);
         }
         .ximg {
@@ -105,7 +105,7 @@
       }
       &-2 {
         @include divide-gallery(true, 22.2222%);
-        @include mix.breakpoint(lg-tablet) {
+        @include mix.breakpoint(md-tablet) {
           @include divide-gallery(true, 15.1515%);
         }
         @include mix.breakpoint(tablet) {
@@ -117,7 +117,7 @@
       }
       &-1 {
         @include divide-gallery(true, 11.1111%);
-        @include mix.breakpoint(lg-tablet) {
+        @include mix.breakpoint(md-tablet) {
           @include divide-gallery(true, 100%);
         }
         .ximg {

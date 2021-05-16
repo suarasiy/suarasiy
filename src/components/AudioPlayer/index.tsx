@@ -29,6 +29,7 @@ import {
   RiPauseCircleLine,
   RiRewindLine,
   RiSpeedLine,
+  RiCheckboxCircleFill,
 } from 'react-icons/ri';
 
 const durationTransform = (n: number, fixed: number = 2): number => {
@@ -104,22 +105,53 @@ const Index: React.FC<musics> = ({ ...musics }) => {
 
   const handleOnBuffer = (buffer: boolean): void => {
     setState({ ...state, onBuffer: buffer });
+    console.log(state + ' ---- ' + buffer);
   };
 
   return (
     <div className={'audio-player'.concat(musics.playing ? '-on' : '-off')}>
-      {state.onBuffer && musics.bufferStatus === 'READY' ? (
-        <span className="on-buffer"></span>
-      ) : null}
-      <button onClick={music.onPlay}>
+      {state.onBuffer ? <span className="on-buffer"></span> : null}
+      <button id="control-play" onClick={music.onPlay}>
         {musics.playing ? (
-          <RiPauseCircleLine size={65} fill="#3A71FF" />
+          <RiPauseCircleLine
+            size={65}
+            style={{ verticalAlign: 'middle' }}
+            fill="#3A71FF"
+          />
         ) : (
-          <RiPlayCircleLine size={65} fill="#3A71FF" />
+          <RiPlayCircleLine
+            size="100%"
+            style={{ verticalAlign: 'middle' }}
+            fill="#3A71FF"
+          />
         )}
       </button>
       <div className="audio-info">
-        <section>
+        <section className="controls-wrap">
+          {musics.bufferStatus === 'READY' ? (
+            <RiCheckboxCircleFill
+              id="bufferStatus"
+              size={musics.playing ? 16 : 20}
+              fill="#3A71FF"
+              style={{
+                verticalAlign: 'middle',
+                marginRight: 8,
+                opacity: 1,
+                transition: '.3s cubic-bezier(0.29, 1, 0.52, 0.97) 0s',
+              }}
+            />
+          ) : (
+            <RiCheckboxCircleFill
+              id="bufferStatus"
+              size={1}
+              fill="#FFF"
+              style={{
+                verticalAlign: 'middle',
+                marginRight: 0,
+                opacity: 0,
+              }}
+            />
+          )}
           <span className="title">{music.title}</span>{' '}
           <span className="duration">
             {musics.playing
@@ -146,7 +178,7 @@ const Index: React.FC<musics> = ({ ...musics }) => {
             step={0.05}
             min={0}
             max={1}
-            values={[0.8]}
+            values={[state.volume]}
             onChange={(values) => handleVolume(values[0])}
             renderTrack={({ props, children }) => (
               <div {...props} className="volume-track">
