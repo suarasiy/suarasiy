@@ -17,7 +17,6 @@
 
 @mixin audio-player($active: false) {
   position: relative;
-  // overflow: hidden;
 
   span.on-buffer {
     position: absolute;
@@ -218,7 +217,7 @@
     transform: translateY(-50%);
     width: 250px;
     height: 100%;
-    z-index: -1;
+    z-index: -3;
     border-radius: 0 3px 3px 0;
     overflow: hidden;
     transition: transform 0.3s mix.$transition-soft-end 0s,
@@ -226,12 +225,13 @@
       height 0.7s mix.$transition-soft-end;
 
     @if ($active) {
+      z-index: -1;
       @include mix.breakpoint(lg-tablet) {
         top: 0;
         right: 0;
         left: 50%;
         width: 100%;
-        height: 165px;
+        height: 100%;
         transform: translateX(-50%);
       }
     }

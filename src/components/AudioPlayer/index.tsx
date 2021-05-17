@@ -105,7 +105,6 @@ const Index: React.FC<musics> = ({ ...musics }) => {
 
   const handleOnBuffer = (buffer: boolean): void => {
     setState({ ...state, onBuffer: buffer });
-    console.log(state + ' ---- ' + buffer);
   };
 
   return (
