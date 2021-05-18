@@ -11,9 +11,21 @@
   right: 30px;
   bottom: 30px;
   left: 30px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(39, 37, 70, 0.6);
   border-radius: 8px;
   overflow: auto;
+  transition: top 0.3s mix.$transition-soft-end 0s,
+    right 0.3s mix.$transition-soft-end 0s,
+    bottom 0.3s mix.$transition-soft-end 0s,
+    left 0.3s mix.$transition-soft-end 0s;
+
+  @include mix.breakpoint(lg-tablet) {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
 
   .title-bar {
     @include mix.flex-do-row(
@@ -64,6 +76,7 @@
     img {
       object-fit: contain;
       object-position: center center;
+      transition: opacity 0.3s linear 0s;
     }
   }
 
@@ -76,6 +89,12 @@
       $align: center
     );
     background-color: rgba(mix.$color-image-background, 0.7);
+    overflow-x: auto;
+    overflow-y: clip;
+
+    @include mix.breakpoint(sm-desktop) {
+      justify-content: flex-start;
+    }
 
     button.image-box {
       width: 134px;
@@ -85,6 +104,7 @@
       margin: 5px;
       padding: 0;
       overflow: hidden;
+      flex: 0 0 auto;
       border: 2px solid transparent;
       transition: transform 0.2s mix.$transition-soft-end 0s,
         padding 0.2s mix.$transition-soft-end 0s,
@@ -114,7 +134,7 @@
   &-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(39, 37, 70, 0.6);
     backdrop-filter: blur(25px);
   }
 }
@@ -178,6 +198,9 @@
     @include mix.full-width();
     margin-bottom: 15px;
     flex-wrap: wrap;
+
+    transition: height 0.5s mix.$transition-soft-end 0s,
+      opacity 0.4s mix.$transition-soft-end 0s;
 
     .divide-gallery {
       @mixin img {

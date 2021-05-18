@@ -1,0 +1,88 @@
+@use "../../mixins/index.scss" as mix;
+
+.spinner-container {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(mix.$color-spinner, 0.355);
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ripple 1s infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: mix.$transition-soft-end;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: mix.$color-spinner;
+    width: 55%;
+    height: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: blob 1s infinite alternate;
+    animation-timing-function: mix.$transition-width;
+  }
+
+  span {
+    font-family: map-get($map: mix.$fonts, $key: 'Exo 2');
+    font-size: 17px;
+    color: mix.$color-spinner;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    width: 135%;
+    height: 135%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes blob {
+  0% {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  80% {
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

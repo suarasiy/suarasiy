@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Axios from 'axios';
 
 import { ProfileProps, ImagesType } from '../profile/interface/interface';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import Spinner from '../../components/spinner/index';
 
 import Modal from 'react-modal';
 
@@ -15,16 +17,20 @@ import ButtonNavigation from '../../components/button-navigation/index';
 import { resources } from '../../data';
 
 import Anime from '../../assets/images/img.jpg';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 Modal.setAppElement('#root');
 
 const Index: React.FC = () => {
+  const counter = useRef<number>(0);
   const [images, setImages] = useState<ImagesType[]>([]);
   const [ximg1, setXimg1] = useState<ImagesType[]>([]);
   const [ximg2, setXimg2] = useState<ImagesType[]>([]);
   const [ximg3, setXimg3] = useState<ImagesType[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [onPreview, setOnPreview] = useState<ImagesType>();
+  const [imgLoaded, setImgLoaded] = useState<Boolean>(false);
+  const [imgListLoaded, setImgListLoaded] = useState<Boolean>(false);
 
   const JsonDataImageDivider = (dataprofile: ProfileProps) => {
     const data = dataprofile;
@@ -68,8 +74,20 @@ const Index: React.FC = () => {
   };
 
   const modalPreviewHandler = (image: ImagesType): void => {
+    setImgLoaded(false);
     setOnPreview(image);
     setModalOpen(true);
+  };
+
+  const imageLoaded = (): void => {
+    setImgLoaded(true);
+  };
+
+  const imageListLoaded = (): void => {
+    counter.current += 1;
+    if (counter.current >= images.length) {
+      setImgListLoaded(true);
+    }
   };
 
   useEffect(() => {
@@ -81,7 +99,13 @@ const Index: React.FC = () => {
 
   return (
     <div className="images-container">
-      <div className="gallery">
+      <div
+        className="gallery"
+        style={{
+          pointerEvents: imgListLoaded ? 'unset' : 'none',
+          opacity: imgListLoaded ? 1 : 0,
+        }}
+      >
         <div className="divide-gallery-3">
           {ximg1.map((image, index) => (
             <div
@@ -90,10 +114,10 @@ const Index: React.FC = () => {
               onClick={() => modalPreviewHandler(image)}
             >
               <LazyLoadImage
-                effect="blur"
                 src={image.light}
                 alt={image.title}
                 draggable={false}
+                onLoad={imageListLoaded}
               />
             </div>
           ))}
@@ -106,10 +130,10 @@ const Index: React.FC = () => {
               onClick={() => modalPreviewHandler(image)}
             >
               <LazyLoadImage
-                effect="blur"
                 src={image.light}
                 alt={image.title}
                 draggable={false}
+                onLoad={imageListLoaded}
               />
             </div>
           ))}
@@ -122,10 +146,10 @@ const Index: React.FC = () => {
               onClick={() => modalPreviewHandler(image)}
             >
               <LazyLoadImage
-                effect="blur"
                 src={image.light}
                 alt={image.title}
                 draggable={false}
+                onLoad={imageListLoaded}
               />
             </div>
           ))}
@@ -148,17 +172,23 @@ const Index: React.FC = () => {
           </button>
         </div>
         <div className="image-preview">
+          {imgLoaded ? null : <Spinner />}
           <LazyLoadImage
-            src={onPreview?.light}
+            src={onPreview?.url}
             width="100%"
             height="100%"
             alt="full-resolution-preview"
             draggable={false}
+            onLoad={imageLoaded}
+            style={{
+              opacity: imgLoaded ? 1 : 0,
+            }}
           />
         </div>
         <div className="image-list">
           {images.map((image) => (
             <button
+              key={image.url}
               className={'image-box'.concat(
                 onPreview?.url === image.url ? ' active' : ''
               )}
