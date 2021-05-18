@@ -1,5 +1,6 @@
 export type ImagesType = {
   title: string;
+  light: string;
   url: string;
 };
 
