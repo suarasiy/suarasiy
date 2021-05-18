@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/suarasiy/static/css/main.b1661e7b.chunk.css",
-    "main.js": "/suarasiy/static/js/main.f70e2d44.chunk.js",
-    "main.js.map": "/suarasiy/static/js/main.f70e2d44.chunk.js.map",
-    "runtime-main.js": "/suarasiy/static/js/runtime-main.2cce2a58.js",
-    "runtime-main.js.map": "/suarasiy/static/js/runtime-main.2cce2a58.js.map",
+    "main.css": "/suarasiy/static/css/main.dc4d3155.chunk.css",
+    "main.js": "/suarasiy/static/js/main.0b960b46.chunk.js",
+    "main.js.map": "/suarasiy/static/js/main.0b960b46.chunk.js.map",
+    "runtime-main.js": "/suarasiy/static/js/runtime-main.db4343de.js",
+    "runtime-main.js.map": "/suarasiy/static/js/runtime-main.db4343de.js.map",
     "static/css/2.0694b5c7.chunk.css": "/suarasiy/static/css/2.0694b5c7.chunk.css",
-    "static/js/2.073e7db7.chunk.js": "/suarasiy/static/js/2.073e7db7.chunk.js",
-    "static/js/2.073e7db7.chunk.js.map": "/suarasiy/static/js/2.073e7db7.chunk.js.map",
-    "static/js/3.750e428f.chunk.js": "/suarasiy/static/js/3.750e428f.chunk.js",
-    "static/js/3.750e428f.chunk.js.map": "/suarasiy/static/js/3.750e428f.chunk.js.map",
+    "static/js/2.e2439681.chunk.js": "/suarasiy/static/js/2.e2439681.chunk.js",
+    "static/js/2.e2439681.chunk.js.map": "/suarasiy/static/js/2.e2439681.chunk.js.map",
+    "static/js/3.7b32ced3.chunk.js": "/suarasiy/static/js/3.7b32ced3.chunk.js",
+    "static/js/3.7b32ced3.chunk.js.map": "/suarasiy/static/js/3.7b32ced3.chunk.js.map",
     "index.html": "/suarasiy/index.html",
     "static/css/2.0694b5c7.chunk.css.map": "/suarasiy/static/css/2.0694b5c7.chunk.css.map",
-    "static/css/main.b1661e7b.chunk.css.map": "/suarasiy/static/css/main.b1661e7b.chunk.css.map",
-    "static/js/2.073e7db7.chunk.js.LICENSE.txt": "/suarasiy/static/js/2.073e7db7.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/suarasiy/static/media/bg7.7ad87e02.png",
-    "static/media/img.1e5a5eba.jpg": "/suarasiy/static/media/img.1e5a5eba.jpg"
+    "static/css/main.dc4d3155.chunk.css.map": "/suarasiy/static/css/main.dc4d3155.chunk.css.map",
+    "static/js/2.e2439681.chunk.js.LICENSE.txt": "/suarasiy/static/js/2.e2439681.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/suarasiy/static/media/bg7.7ad87e02.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2cce2a58.js",
+    "static/js/runtime-main.db4343de.js",
     "static/css/2.0694b5c7.chunk.css",
-    "static/js/2.073e7db7.chunk.js",
-    "static/css/main.b1661e7b.chunk.css",
-    "static/js/main.f70e2d44.chunk.js"
+    "static/js/2.e2439681.chunk.js",
+    "static/css/main.dc4d3155.chunk.css",
+    "static/js/main.0b960b46.chunk.js"
   ]
 }
