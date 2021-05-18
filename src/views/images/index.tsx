@@ -7,6 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import Spinner from '../../components/spinner/index';
+import Loader from '../../components/loader/index';
 
 import Modal from 'react-modal';
 
@@ -15,9 +16,6 @@ import { RiCloseCircleFill } from 'react-icons/ri';
 import ButtonNavigation from '../../components/button-navigation/index';
 
 import { resources } from '../../data';
-
-import Anime from '../../assets/images/img.jpg';
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 Modal.setAppElement('#root');
 
@@ -31,6 +29,7 @@ const Index: React.FC = () => {
   const [onPreview, setOnPreview] = useState<ImagesType>();
   const [imgLoaded, setImgLoaded] = useState<Boolean>(false);
   const [imgListLoaded, setImgListLoaded] = useState<Boolean>(false);
+  const [counterListLoaded, setCounterListLoaded] = useState<number>(0);
 
   const JsonDataImageDivider = (dataprofile: ProfileProps) => {
     const data = dataprofile;
@@ -85,6 +84,7 @@ const Index: React.FC = () => {
 
   const imageListLoaded = (): void => {
     counter.current += 1;
+    setCounterListLoaded(counter.current);
     if (counter.current >= images.length) {
       setImgListLoaded(true);
     }
@@ -99,6 +99,13 @@ const Index: React.FC = () => {
 
   return (
     <div className="images-container">
+      {!imgListLoaded ? (
+        <Loader
+          minValue={0}
+          value={counterListLoaded}
+          maxValue={images.length}
+        />
+      ) : null}
       <div
         className="gallery"
         style={{

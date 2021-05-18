@@ -1,0 +1,38 @@
+@use "../../mixins/index.scss" as mix;
+
+.loader-container {
+  @include mix.flex-do-row(
+    $width: 350px,
+    $align: center,
+    $justify-content: space-between
+  );
+  position: absolute;
+  @include mix.posXY($focus: center);
+  padding: 8px 15px;
+  border-radius: 20px;
+  background-color: rgba(mix.$color-progress-track-container, 0.35);
+  overflow: hidden;
+  box-shadow: 0 0 20px 1px rgba(mix.$color-progress-track-container, 0.55);
+  transition: opacity 0.4s mix.$transition-soft-end 0s;
+
+  span.loader-fill {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transform: translateY(-50%);
+    background-color: mix.$color-progress-track-fill;
+    border-radius: 30px;
+    transition: width 0.5s mix.$transition-soft-end 0s;
+    box-shadow: 0 0 20px 1px mix.$color-progress-track-fill;
+  }
+
+  span.loader-work-process {
+    text-align: left;
+    font-family: map-get($map: mix.$fonts, $key: 'Exo 2');
+    font-size: 15px;
+    color: white;
+  }
+}

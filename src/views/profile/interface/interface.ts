@@ -12,5 +12,6 @@ export interface ProfileProps {
   level: string | number;
   bio: string;
   liked: string | null;
+  photo: string;
   images: ImagesType[] | null;
 }

@@ -7,6 +7,9 @@ $tablet-lg-size: 795px;
 $tablet-md-size: 705px;
 $tablet-size: 580px;
 
+$vh-large: 890px;
+$vh-md-smoll: 695px;
+
 @mixin breakpoint($point) {
   @if ($point == desktop) {
     @media screen and (max-width: $desktop-size) {
@@ -40,6 +43,18 @@ $tablet-size: 580px;
   }
   @if ($point == tablet) {
     @media screen and (max-width: $tablet-size) {
+      @content;
+    }
+  }
+
+  @if ($point == vh-desktop) {
+    @media screen and (max-height: $vh-large) {
+      @content;
+    }
+  }
+
+  @if ($point == vh-md-desktop) {
+    @media screen and (max-height: $vh-md-smoll) {
       @content;
     }
   }
