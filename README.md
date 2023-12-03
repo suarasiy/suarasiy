@@ -41,4 +41,22 @@ _P.S. I'm sorry if I made too much mistakes on English since I also currently st
 
 ---
 
-- **(pdf) portfolio:** [Portfolio - Google Drive](https://drive.google.com/file/d/1wiW6h7PaDoJbLU1b3ExpRA_4PTOOj_Ij/view?usp=sharing) (_last update on July 10, 2022_)
+### Avicon varieties that I made
+
+I love to make design variety on my icon, here is some of sample:
+
+![alt](./images/icons/string-nature.png) ![img](./images/icons/string-spooky.png) ![img](./images/icons/string-atom.png) ![img](./images/icons/string-4-kind.png) ![img](./images/icons/string-new-year.png) ![img](./images/icons/string-winter.png) ![img](./images/icons/string-maretu.png)
+
+![img](./images/icons/illust-1.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/illust-2.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/illust-3.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/illust-4.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/illust-5.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/illust-6.png)
+
+![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/drawing-1.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/drawing-2.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/drawing-3.png) ![img](https://file+.vscode-resource.vscode-cdn.net/d%3A/Yanagihara/repo/react/suarasiy/images/icons/drawing-4.png)
+
+---
+
+[!IMPORTANT]
+
+> - **💬 discord id:** **_Suara_** (_P.S._ Please let me know if you add me through github)
+> - **📰 (pdf) portfolio:** [Portfolio - Google Drive](https://drive.google.com/file/d/1wiW6h7PaDoJbLU1b3ExpRA_4PTOOj_Ij/view?usp=sharing) (_last update on July 10, 2022_)
+> - **🔜 (pdf) resume:** coming soon...
+> - **📊 wakatime:** [wakatime/@suarasiy](https://wakatime.com/@suarasiy)
+> - **🌐 sns page:** [github/@sns](http://suarasiy.github.io/sns/)
