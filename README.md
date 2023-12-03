@@ -53,8 +53,7 @@ I love to make design variety on my icon, here is some of sample:
 
 ---
 
-[!IMPORTANT]
-
+> [!IMPORTANT]
 > - **💬 discord id:** **_Suara_** (_P.S._ Please let me know if you add me through github)
 > - **📰 (pdf) portfolio:** [Portfolio - Google Drive](https://drive.google.com/file/d/1wiW6h7PaDoJbLU1b3ExpRA_4PTOOj_Ij/view?usp=sharing) (_last update on July 10, 2022_)
 > - **🔜 (pdf) resume:** coming soon...
