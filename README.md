@@ -66,7 +66,7 @@ I love to make design variety on my icon, here is some of sample:
 ---
 
 > [!IMPORTANT]
-
+>
 > - **💬 discord id:** **_Suara_** (_P.S._ Please let me know if you add me through github)
 > - **📰 (pdf) portfolio:** [Portfolio - Google Drive](https://drive.google.com/file/d/1Q7E6uLaexgGlX3U648aGn3nolyh9Dgtl/view?usp=sharing 'last update on December 11, 2023') (_last update on December 11, 2023_)
 > - **🔜 (pdf) resume:** coming soon...
