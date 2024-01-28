@@ -1,3 +1,7 @@
+![I Own, I Adore, I for you](./images/i%20adore,%20i%20own,%20i%20for%20you%20-%20design%201.png)
+
+![hr](./images/hr.png 'Horizontal line')
+
 ![Suara's self made github card 2024](<./images/Github%20Profile%20Card%202024%20(self%20made,%20aligned%20wide).png>)
 
 ### Short Introduction
