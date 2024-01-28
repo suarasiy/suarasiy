@@ -1,4 +1,4 @@
-![I Own, I Adore, I for you](./images/i%20adore,%20i%20own,%20i%20for%20you%20-%20design%201.png)
+![I Own, I Adore, I for you](./images/i%20adore,%20i%20own,%20i%20for%20you%20-%20design%202.png)
 
 ![hr](./images/hr.png 'Horizontal line')
 
