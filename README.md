@@ -2,7 +2,13 @@
 
 ![hr](./images/hr.png 'Horizontal line')
 
+<details>
+
+<summary><strong>Show Yearly Banner</strong></summary> <br />
+
 ![Suara's self made github card 2024](<./images/Github%20Profile%20Card%202024%20(self%20made,%20aligned%20wide).png>)
+
+</details>
 
 ### Short Introduction
 
@@ -59,7 +65,7 @@ I love to make design variety on my icon, here is some of sample:
 
 <details>
 
-<summary>Show Icons</summary> <br />
+<summary><strong>Show Icons</strong></summary> <br />
 
 ![alt](./images/icons/string-nature.png) ![img](./images/icons/string-spooky.png) ![img](./images/icons/string-atom.png) ![img](./images/icons/string-4-kind.png) ![img](./images/icons/string-new-year.png) ![img](./images/icons/string-winter.png) ![img](./images/icons/string-maretu.png)
 
